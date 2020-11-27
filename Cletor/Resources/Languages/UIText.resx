@@ -1,0 +1,492 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AffirmativeButtonText" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="CancelButtonText" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="ClosingWithoutSavingDialogMessage" xml:space="preserve">
+    <value>Do you want to save your changes before closing the app?</value>
+  </data>
+  <data name="ClosingWithoutSavingDialogTitle" xml:space="preserve">
+    <value>You have unsaved changes</value>
+  </data>
+  <data name="CommandHeaderAbout" xml:space="preserve">
+    <value>_About</value>
+  </data>
+  <data name="CommandHeaderExit" xml:space="preserve">
+	  <value>_Exit</value>
+  </data>
+  <data name="CommandHeaderExport" xml:space="preserve">
+	  <value>_Export</value>
+  </data>
+  <data name="CommandHeaderNew" xml:space="preserve">
+	  <value>_New</value>
+  </data>
+  <data name="CommandHeaderOpen" xml:space="preserve">
+	  <value>_Open</value>
+  </data>
+  <data name="CommandHeaderPrint" xml:space="preserve">
+	  <value>_Print</value>
+  </data>
+  <data name="CommandHeaderSave" xml:space="preserve">
+	  <value>_Save</value>
+  </data>
+  <data name="CommandHeaderShortcuts" xml:space="preserve">
+	  <value>Shotcuts</value>
+  </data>
+  <data name="CommandToolTipAbout" xml:space="preserve">
+	  <value>Displays information about Clean Editor</value>
+  </data>
+  <data name="CommandToolTipExit" xml:space="preserve">
+	  <value>Closes the application</value>
+  </data>
+  <data name="CommandToolTipExport" xml:space="preserve">
+	  <value>Exports the document to html or md format</value>
+  </data>
+  <data name="CommandToolTipNew" xml:space="preserve">
+	  <value>Creates a new document</value>
+  </data>
+  <data name="CommandToolTipOpen" xml:space="preserve">
+	  <value>Opens a document</value>
+  </data>
+  <data name="CommandToolTipPrint" xml:space="preserve">
+	  <value>Prints the document</value>
+  </data>
+  <data name="CommandToolTipSave" xml:space="preserve">
+	  <value>Saves unsaved changes</value>
+  </data>
+  <data name="CommandToolTipShortcuts" xml:space="preserve">
+	  <value>Displays the list of keyboard shortcuts</value>
+  </data>
+  <data name="DefaultDocumentTitle" xml:space="preserve">
+    <value>New Document</value>
+  </data>
+  <data name="FolderPickerTitle" xml:space="preserve">
+    <value>Select temporal files path</value>
+  </data>
+  <data name="LabelAbout" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="LabelAboutTitle" xml:space="preserve">
+    <value>About Clean Editor</value>
+  </data>
+  <data name="LabelBold" xml:space="preserve">
+    <value>Bold</value>
+  </data>
+  <data name="LabelContact" xml:space="preserve">
+    <value>Contact:</value>
+  </data>
+  <data name="LabelCreatedBy" xml:space="preserve">
+    <value>Created By:</value>
+  </data>
+  <data name="LabelCreationDate" xml:space="preserve">
+    <value>Creation Date:</value>
+  </data>
+  <data name="LabelDecreaseIndent" xml:space="preserve">
+    <value>Decrease Indent</value>
+  </data>
+  <data name="LabelDevelopers" xml:space="preserve">
+    <value>Developers:</value>
+  </data>
+  <data name="LabelExit" xml:space="preserve">
+    <value>Exit</value>
+  </data>
+  <data name="LabelExport" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="LabelFind" xml:space="preserve">
+    <value>Find</value>
+  </data>
+  <data name="LabelFindAndReplace" xml:space="preserve">
+    <value>Find and Replace</value>
+  </data>
+  <data name="LabelFontFamily" xml:space="preserve">
+    <value>Font family</value>
+  </data>
+  <data name="LabelFontSize" xml:space="preserve">
+    <value>Font size</value>
+  </data>
+  <data name="LabelGraphicsAndTables" xml:space="preserve">
+    <value>Graphics and Tables</value>
+  </data>
+  <data name="LabelHeader1" xml:space="preserve">
+    <value>Header 1</value>
+  </data>
+  <data name="LabelHeader2" xml:space="preserve">
+    <value>Header 2</value>
+  </data>
+  <data name="LabelHeader3" xml:space="preserve">
+    <value>Header 3</value>
+  </data>
+  <data name="LabelHeader4" xml:space="preserve">
+    <value>Header 4</value>
+  </data>
+  <data name="LabelIncreaseIndent" xml:space="preserve">
+    <value>Increase Indent</value>
+  </data>
+  <data name="LabelInformation" xml:space="preserve">
+    <value>Information:</value>
+  </data>
+  <data name="LabelInsertImage" xml:space="preserve">
+    <value>Insert Image</value>
+  </data>
+  <data name="LabelInsertLink" xml:space="preserve">
+    <value>Insert Link</value>
+  </data>
+  <data name="LabelInsertQuote" xml:space="preserve">
+    <value>Insert Quote</value>
+  </data>
+  <data name="LabelInsertRemoteImage" xml:space="preserve">
+    <value>Insert Remote Image</value>
+  </data>
+  <data name="LabelInsertTable" xml:space="preserve">
+    <value>Insert Table</value>
+  </data>
+  <data name="LabelInsetList" xml:space="preserve">
+    <value>Insert List</value>
+  </data>
+  <data name="LabelIsFullScreen" xml:space="preserve">
+    <value>Is full screen</value>
+  </data>
+  <data name="LabelItalic" xml:space="preserve">
+    <value>Italic</value>
+  </data>
+  <data name="LabelLanguage" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="LabelLibraries" xml:space="preserve">
+    <value>Libraries:</value>
+  </data>
+  <data name="LabelLicense" xml:space="preserve">
+    <value>License:</value>
+  </data>
+  <data name="LabelLicenses" xml:space="preserve">
+    <value>Licenses:</value>
+  </data>
+  <data name="LabelLists" xml:space="preserve">
+    <value>Lists</value>
+  </data>
+  <data name="LabelMenu" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="LabelNew" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="LabelNormal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="LabelOpen" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="LabelOptions" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="LabelPrint" xml:space="preserve">
+    <value>Print</value>
+  </data>
+  <data name="LabelPublishDate" xml:space="preserve">
+    <value>Publish date:</value>
+  </data>
+  <data name="LabelQueries" xml:space="preserve">
+    <value>Queries</value>
+  </data>
+  <data name="LabelReferences" xml:space="preserve">
+    <value>References</value>
+  </data>
+  <data name="LabelSave" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="LabelScreenMode" xml:space="preserve">
+    <value>Screen mode</value>
+  </data>
+  <data name="LabelShortcutList" xml:space="preserve">
+    <value>Shortcut List</value>
+  </data>
+  <data name="LabelSourceCode" xml:space="preserve">
+    <value>Source code:</value>
+  </data>
+  <data name="LabelStrikeThrough" xml:space="preserve">
+    <value>Strikethrough</value>
+  </data>
+  <data name="LabelTemporalFilesPath" xml:space="preserve">
+    <value>Temporal files path</value>
+  </data>
+  <data name="LabelTernsOfUse" xml:space="preserve">
+    <value>Terns of use:</value>
+  </data>
+  <data name="LabelTextFormat" xml:space="preserve">
+    <value>Text Format</value>
+  </data>
+  <data name="LabelTextStyles" xml:space="preserve">
+    <value>Text Styles</value>
+  </data>
+  <data name="LabelTheme" xml:space="preserve">
+    <value>Theme</value>
+  </data>
+  <data name="LabelToggleFullScreen" xml:space="preserve">
+    <value>Toggle Full Screen</value>
+  </data>
+  <data name="LabelToggleTheme" xml:space="preserve">
+    <value>Toggle Theme</value>
+  </data>
+  <data name="LabelUnderline" xml:space="preserve">
+    <value>Underline</value>
+  </data>
+  <data name="LabelVersion" xml:space="preserve">
+    <value>Version: 0.0.1</value>
+  </data>
+  <data name="LanguageEnglish" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="LanguageFrench" xml:space="preserve">
+    <value>French</value>
+  </data>
+  <data name="LanguageSpanish" xml:space="preserve">
+    <value>Spanish</value>
+  </data>
+  <data name="NegativeButtonText" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="OptionCurrentPath" xml:space="preserve">
+    <value>Current path</value>
+  </data>
+  <data name="OptionSelectAFontFamily" xml:space="preserve">
+    <value>Select a Font family</value>
+  </data>
+  <data name="OptionSelectAFontSize" xml:space="preserve">
+    <value>Select a font size (Min:8, Max:100)</value>
+  </data>
+  <data name="OptionSelectALanguage" xml:space="preserve">
+    <value>Select a language</value>
+  </data>
+  <data name="OptionSelectATheme" xml:space="preserve">
+    <value>Select a theme</value>
+  </data>
+  <data name="ProcessMessageLoading" xml:space="preserve">
+    <value>Loading...</value>
+  </data>
+  <data name="ToolTipBoldCommand" xml:space="preserve">
+    <value>Bold (Ctrl + B)</value>
+  </data>
+  <data name="ToolTipChangeTemporalFilesCommand" xml:space="preserve">
+    <value>Change the temporal files location</value>
+  </data>
+  <data name="ToolTipChangeTheme" xml:space="preserve">
+    <value>Change Theme (F10)</value>
+  </data>
+  <data name="ToolTipDecreaseIndentCommand" xml:space="preserve">
+    <value>Decrease Indent (Ctrl + ,)</value>
+  </data>
+  <data name="ToolTipFindAndReplaceCommand" xml:space="preserve">
+    <value>Find and Replace (Ctrl + H)</value>
+  </data>
+  <data name="ToolTipFindCommand" xml:space="preserve">
+    <value>Find (Ctrl + F)</value>
+  </data>
+  <data name="ToolTipIncreaseIndentCommand" xml:space="preserve">
+    <value>Increase Indent (Ctrl + M)</value>
+  </data>
+  <data name="ToolTipInsertImageCommand" xml:space="preserve">
+    <value>Insert Image (Ctrl + Shift + I)</value>
+  </data>
+  <data name="ToolTipInsertLinkCommand" xml:space="preserve">
+    <value>Insert Link (Ctrl + K)</value>
+  </data>
+  <data name="ToolTipInsertListCommand" xml:space="preserve">
+    <value>Insert List (Ctrl + Alt + L)</value>
+  </data>
+  <data name="ToolTipInsertQuoteCommand" xml:space="preserve">
+    <value>Insert Quote (Ctrl + Q)</value>
+  </data>
+  <data name="ToolTipInsertRemoteImageCommand" xml:space="preserve">
+    <value>Insert Remote Image (Ctrl + Shift + R)</value>
+  </data>
+  <data name="ToolTipInsertTableCommand" xml:space="preserve">
+    <value>Insert Table (Ctrl + T)</value>
+  </data>
+  <data name="ToolTipItalicCommand" xml:space="preserve">
+    <value>Italic (Ctrl + I)</value>
+  </data>
+  <data name="ToolTipMainMenu" xml:space="preserve">
+    <value>Files management</value>
+  </data>
+  <data name="ToolTipOpenStylesCommand" xml:space="preserve">
+    <value>Manage the list of styles</value>
+  </data>
+  <data name="ToolTipOptions" xml:space="preserve">
+    <value>Options (F9)</value>
+  </data>
+  <data name="ToolTipRedoMenu" xml:space="preserve">
+    <value>Redo the last operation</value>
+  </data>
+  <data name="ToolTipSetHeader1StyleCommand" xml:space="preserve">
+    <value>Header 1 (Ctrl + 1)</value>
+  </data>
+  <data name="ToolTipSetHeader2StyleCommand" xml:space="preserve">
+    <value>Header 2 (Ctrl + 2)</value>
+  </data>
+  <data name="ToolTipSetHeader3StyleCommand" xml:space="preserve">
+    <value>Header 3 (Ctrl + 3)</value>
+  </data>
+  <data name="ToolTipSetHeader4StyleCommand" xml:space="preserve">
+    <value>Header 4 (Ctrl + 4)</value>
+  </data>
+  <data name="ToolTipSetNormalStyleCommand" xml:space="preserve">
+    <value>Normal (Ctrl + 0)</value>
+  </data>
+  <data name="ToolTipSpellCheckCommand" xml:space="preserve">
+    <value>Shows the spelling pane</value>
+  </data>
+  <data name="ToolTipStrikeThroughCommand" xml:space="preserve">
+    <value>Strikethrough (Ctrl + Shift + S)</value>
+  </data>
+  <data name="ToolTipToggleFullScreenMenu" xml:space="preserve">
+    <value>Toggle Full Screen (F11)</value>
+  </data>
+  <data name="ToolTipToggleToolbarModeCommand" xml:space="preserve">
+    <value>Toggle toolbar visibility mode</value>
+  </data>
+  <data name="ToolTipUnderlineCommand" xml:space="preserve">
+    <value>Underline (Ctrl + U)</value>
+  </data>
+  <data name="ToolTipUndoMenu" xml:space="preserve">
+    <value>Undo the last operation (Ctrl + Z)</value>
+  </data>
+  <data name="AllSupportedFiles" xml:space="preserve">
+	  <value>All supported files (*.xml,*.docx,*.dotx,*.doc,*.dot,*.htm,*.html,*.rtf,*.txt,*.xaml,*.md)|*.xml;*.docx;*.dotx;*.doc;*.dot;*.htm;*.html;*.rtf;*.txt;*.xaml;*.md|Word XML Document (*.xml)|*.xml|Word Document (*.docx)|*.docx|Word Template (*.dotx)|*.dotx|Word 97 - 2003 Document (*.doc)|*.doc|Word 97 - 2003 Template (*.dot)|*.dot|Web Page (*.htm,*.html)|*.htm;*.html|Rich Text File (*.rtf)|*.rtf|Text File (*.txt)|*.txt|Xaml File (*.xaml)|*.xaml|Markdown File (*.md)|*.md</value>
+  </data>
+  <data name="ProcessMessageSaving" xml:space="preserve">
+	  <value>Saving changes...</value>
+  </data>
+  <data name="ProcessMessageOpening" xml:space="preserve">
+	  <value>Opening large document...</value>
+  </data>
+  <data name="ProcessMessageCheckingChanges" xml:space="preserve">
+	  <value>Checking for changes...</value>
+  </data>
+  <data name="ProcessMessageInsertingImage" xml:space="preserve">
+	  <value>Inserting the imgae...</value>
+  </data>
+  <data name="AllSupportedFilesSave" xml:space="preserve">
+	  <value>Word XML Document (*.xml)|*.xml|Word Document (*.docx)|*.docx|Word Template (*.dotx)|*.dotx|Word 97 - 2003 Document (*.doc)|*.doc|Word 97 - 2003 Template (*.dot)|*.dot|Web Page (*.htm,*.html)|*.htm;*.html|Rich Text File (*.rtf)|*.rtf|Text File (*.txt)|*.txt|Xaml File (*.xaml)|*.xaml|Markdown File (*.md)|*.md</value>
+  </data>
+</root>

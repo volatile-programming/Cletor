@@ -1,0 +1,982 @@
+<mah:MetroWindow
+	x:Class="Cletor.MainWindow"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:controls="clr-namespace:Cletor.Views.Controls"
+	xmlns:converters="clr-namespace:Cletor.Views.Converters"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+	xmlns:languages="clr-namespace:Cletor.Resources.Languages"
+	xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:richTextBoxAdv="clr-namespace:Syncfusion.Windows.Controls.RichTextBoxAdv;assembly=Syncfusion.SfRichTextBoxAdv.Wpf"
+	xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+	Title="{Binding WindowTitle}"
+	MinWidth="640"
+	MinHeight="480"
+	Closing="OnClosing"
+	FlowDirection="LeftToRight"
+	FontFamily="{DynamicResource BaseFontFamily}"
+	FontSize="{DynamicResource BaseFontSize}"
+	PreviewKeyDown="OnPreviewKeyDown"
+	mc:Ignorable="d">
+
+	<!--#region Resources-->
+	<mah:MetroWindow.Resources>
+		<languages:UIText x:Key="Language" />
+	</mah:MetroWindow.Resources>
+	<!--#endregion-->
+
+	<!--#region Windows Header-->
+	<mah:MetroWindow.LeftWindowCommands>
+		<mah:WindowCommands>
+			<mah:DropDownButton
+				Content="{iconPacks:Modern Folder}"
+				ItemsSource="{Binding MainMenu}"
+				ToolTip="{Binding Source={StaticResource Language}, Path=ToolTipMainMenu}" />
+			<Button
+				Command="syncfusion:SfRichTextBoxAdv.UndoCommand"
+				CommandTarget="{Binding ElementName=TextEditor}"
+				Content="{iconPacks:Modern Undo}"
+				ToolTip="{Binding Source={StaticResource Language}, Path=ToolTipUndoMenu}" />
+			<Button
+				Command="syncfusion:SfRichTextBoxAdv.RedoCommand"
+				CommandTarget="{Binding ElementName=TextEditor}"
+				Content="{iconPacks:Modern Redo}"
+				ToolTip="{Binding Source={StaticResource Language}, Path=ToolTipRedoMenu}" />
+		</mah:WindowCommands>
+	</mah:MetroWindow.LeftWindowCommands>
+
+	<mah:MetroWindow.RightWindowCommands>
+		<mah:WindowCommands>
+			<Button
+				Command="{Binding OpenOptions}"
+				Content="{iconPacks:Modern Settings}"
+				ToolTip="{Binding Source={StaticResource Language}, Path=ToolTipOptions}" />
+			<Button
+				Command="{Binding ToggleTheme}"
+				Content="{iconPacks:Modern Contrast}"
+				ToolTip="{Binding Source={StaticResource Language}, Path=ToolTipChangeTheme}" />
+			<Button
+				Command="{Binding ToggleFullScreen}"
+				Content="{iconPacks:Modern ArrowExpand}"
+				ToolTip="{Binding Source={StaticResource Language}, Path=ToolTipToggleFullScreenMenu}" />
+		</mah:WindowCommands>
+	</mah:MetroWindow.RightWindowCommands>
+	<!--#endregion-->
+
+	<!--#region Input Bindings-->
+	<mah:MetroWindow.InputBindings>
+		<KeyBinding
+			Key="S"
+			Command="{Binding Save}"
+			Modifiers="Ctrl" />
+		<KeyBinding
+			Key="O"
+			Command="{Binding Open}"
+			Modifiers="Ctrl" />
+
+		<KeyBinding
+			Key="S"
+			Command="syncfusion:SfRichTextBoxAdv.StrikeThroughCommand"
+			CommandParameter="{Binding Path=IsChecked, ElementName=StrikeButton, Converter={converters:StrikeThroughCommandConverter}}"
+			CommandTarget="{Binding ElementName=TextEditor}"
+			Modifiers="Ctrl+Shift" />
+
+		<KeyBinding
+			Key="OemComma"
+			Command="syncfusion:SfRichTextBoxAdv.DecreaseIndentCommand"
+			CommandTarget="{Binding ElementName=TextEditor}"
+			Modifiers="Ctrl" />
+		<KeyBinding
+			Key="L"
+			Command="syncfusion:SfRichTextBoxAdv.ShowListDialogCommand"
+			CommandTarget="{Binding ElementName=TextEditor}"
+			Modifiers="Ctrl+Alt" />
+
+		<KeyBinding
+			Key="NumPad0"
+			Command="syncfusion:SfRichTextBoxAdv.ApplyStyleCommand"
+			CommandParameter="Normal"
+			CommandTarget="{Binding ElementName=TextEditor}"
+			Modifiers="Ctrl" />
+		<KeyBinding
+			Key="NumPad1"
+			Command="syncfusion:SfRichTextBoxAdv.ApplyStyleCommand"
+			CommandParameter="Heading 1"
+			CommandTarget="{Binding ElementName=TextEditor}"
+			Modifiers="Ctrl" />
+		<KeyBinding
+			Key="NumPad2"
+			Command="syncfusion:SfRichTextBoxAdv.ApplyStyleCommand"
+			CommandParameter="Heading 2"
+			CommandTarget="{Binding ElementName=TextEditor}"
+			Modifiers="Ctrl" />
+		<KeyBinding
+			Key="NumPad3"
+			Command="syncfusion:SfRichTextBoxAdv.ApplyStyleCommand"
+			CommandParameter="Heading 3"
+			CommandTarget="{Binding ElementName=TextEditor}"
+			Modifiers="Ctrl" />
+		<KeyBinding
+			Key="NumPad4"
+			Command="syncfusion:SfRichTextBoxAdv.ApplyStyleCommand"
+			CommandParameter="Heading 4"
+			CommandTarget="{Binding ElementName=TextEditor}"
+			Modifiers="Ctrl" />
+
+		<KeyBinding
+			Key="Q"
+			Command="{Binding InsertQuote}"
+			Modifiers="Ctrl" />
+
+		<KeyBinding
+			Key="I"
+			Command="syncfusion:SfRichTextBoxAdv.InsertPictureCommand"
+			CommandTarget="{Binding ElementName=TextEditor}"
+			Modifiers="Ctrl+Shift" />
+		<KeyBinding
+			Key="R"
+			Command="{Binding InsertRemotePicture}"
+			Modifiers="Ctrl+Shift" />
+		<KeyBinding
+			Key="T"
+			Command="syncfusion:SfRichTextBoxAdv.ShowInsertTableDialogCommand"
+			CommandTarget="{Binding ElementName=TextEditor}"
+			Modifiers="Ctrl" />
+
+		<KeyBinding Key="F9" Command="{Binding OpenOptions}" />
+		<KeyBinding Key="F10" Command="{Binding ToggleTheme}" />
+		<KeyBinding Key="F11" Command="{Binding ToggleFullScreen}" />
+	</mah:MetroWindow.InputBindings>
+	<!--#endregion-->
+
+	<Grid x:Name="MainContainer">
+		<!--#region Columns And Rows-->
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition />
+			<RowDefinition Height="Auto" />
+		</Grid.RowDefinitions>
+		<!--#endregion-->
+
+		<!--#region Tools Bar-->
+		<Grid
+			x:Name="ToolsBar"
+			Background="{DynamicResource MahApps.Brushes.Gray9}"
+			IsMouseDirectlyOverChanged="OnToggleToolBarVisibility">
+			<WrapPanel
+				Margin="10,10,10,20"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Top"
+				Orientation="Horizontal">
+				<!--#region Block Queries-->
+				<StackPanel Margin="0,0,10,0" Orientation="Horizontal">
+					<syncfusion:ButtonAdv
+						Command="syncfusion:SfRichTextBoxAdv.ShowOptionsPaneCommand"
+						CommandTarget="{Binding ElementName=TextEditor}"
+						Content="{iconPacks:Modern Magnify}"
+						Style="{StaticResource ButtonStyle}"
+						ToolTip="{Binding Source={StaticResource Language}, Path=ToolTipFindCommand}" />
+					<syncfusion:ButtonAdv
+						Command="syncfusion:SfRichTextBoxAdv.ShowFindAndReplaceDialogCommand"
+						CommandTarget="{Binding ElementName=TextEditor}"
+						Content="{iconPacks:Modern PageSearch}"
+						Style="{StaticResource ButtonStyle}"
+						ToolTip="{Binding Source={StaticResource Language}, Path=ToolTipFindAndReplaceCommand}" />
+				</StackPanel>
+				<!--#endregion-->
+
+				<!--#region Block Format-->
+				<StackPanel Margin="0,0,10,0" Orientation="Horizontal">
+					<ToggleButton
+						Content="{iconPacks:Modern TextBold}"
+						IsChecked="{Binding Path=Selection.CharacterFormat.Bold, Mode=TwoWay, ElementName=TextEditor}"
+						Style="{StaticResource ToggleButtonStyle}"
+						ToolTip="{Binding Source={StaticResource Language}, Path=ToolTipBoldCommand}" />
+					<ToggleButton
+						Content="{iconPacks:Modern TextItalic}"
+						IsChecked="{Binding Path=Selection.CharacterFormat.Italic, Mode=TwoWay, ElementName=TextEditor}"
+						Style="{StaticResource ToggleButtonStyle}"
+						ToolTip="{Binding Source={StaticResource Language}, Path=ToolTipItalicCommand}" />
+					<ToggleButton
+						Content="{iconPacks:Modern TextUnderline}"
+						IsChecked="{Binding Path=Selection.CharacterFormat.Underline, Mode=TwoWay, ElementName=TextEditor, Converter={converters:UnderlineTextStyleConverter}, ConverterParameter={x:Reference TextEditor}}"
+						Style="{StaticResource ToggleButtonStyle}"
+						ToolTip="{Binding Source={StaticResource Language}, Path=ToolTipUnderlineCommand}" />
+					<ToggleButton
+						x:Name="StrikeButton"
+						Content="{iconPacks:Modern TextStrikethrough}"
+						IsChecked="{Binding Path=Selection.CharacterFormat.StrikeThrough, Mode=TwoWay, ElementName=TextEditor, Converter={converters:StrikeThroughTextStyleConverter}}"
+						Style="{StaticResource ToggleButtonStyle}"
+						ToolTip="{Binding Source={StaticResource Language}, Path=ToolTipStrikeThroughCommand}" />
+				</StackPanel>
+				<!--#endregion-->
+
+				<!--#region Block List-->
+				<StackPanel Margin="0,0,10,0" Orientation="Horizontal">
+					<syncfusion:ButtonAdv
+						Command="syncfusion:SfRichTextBoxAdv.IncreaseIndentCommand"
+						CommandTarget="{Binding ElementName=TextEditor}"
+						Style="{StaticResource ButtonStyle}"
+						ToolTip="{Binding Source={StaticResource Language}, Path=ToolTipIncreaseIndentCommand}">
+						<Viewbox Width="18">
+							<Path Data="{StaticResource IncreaseIndent}" Fill="{DynamicResource MahApps.Brushes.ThemeForeground}" />
+						</Viewbox>
+					</syncfusion:ButtonAdv>
+					<syncfusion:ButtonAdv
+						Command="syncfusion:SfRichTextBoxAdv.DecreaseIndentCommand"
+						CommandTarget="{Binding ElementName=TextEditor}"
+						Style="{StaticResource ButtonStyle}"
+						ToolTip="{Binding Source={StaticResource Language}, Path=ToolTipDecreaseIndentCommand}">
+						<Viewbox Width="18">
+							<Path Data="{StaticResource DecreaseIndent}" Fill="{DynamicResource MahApps.Brushes.ThemeForeground}" />
+						</Viewbox>
+					</syncfusion:ButtonAdv>
+					<syncfusion:ButtonAdv
+						Command="syncfusion:SfRichTextBoxAdv.ShowListDialogCommand"
+						CommandTarget="{Binding ElementName=TextEditor}"
+						Content="{iconPacks:Modern ListAdd}"
+						Style="{StaticResource ButtonStyle}"
+						ToolTip="{Binding Source={StaticResource Language}, Path=ToolTipInsertListCommand}" />
+				</StackPanel>
+				<!--#endregion-->
+
+				<!--#region Text Style-->
+				<StackPanel Margin="0,0,10,0" Orientation="Horizontal">
+					<syncfusion:ButtonAdv
+						Command="syncfusion:SfRichTextBoxAdv.ApplyStyleCommand"
+						CommandParameter="Normal"
+						CommandTarget="{Binding ElementName=TextEditor}"
+						Style="{StaticResource ButtonStyle}"
+						ToolTip="{Binding Source={StaticResource Language}, Path=ToolTipSetNormalStyleCommand}">
+						<Run
+							FontFamily="Sans"
+							FontSize="18"
+							FontWeight="Medium">
+							N
+						</Run>
+					</syncfusion:ButtonAdv>
+					<syncfusion:ButtonAdv
+						Command="syncfusion:SfRichTextBoxAdv.ApplyStyleCommand"
+						CommandParameter="Heading 1"
+						CommandTarget="{Binding ElementName=TextEditor}"
+						Style="{StaticResource ButtonStyle}"
+						ToolTip="{Binding Source={StaticResource Language}, Path=ToolTipSetHeader1StyleCommand}">
+						<Run
+							FontFamily="Sans"
+							FontSize="18"
+							FontWeight="Medium">
+							H1
+						</Run>
+					</syncfusion:ButtonAdv>
+					<syncfusion:ButtonAdv
+						Command="syncfusion:SfRichTextBoxAdv.ApplyStyleCommand"
+						CommandParameter="Heading 2"
+						CommandTarget="{Binding ElementName=TextEditor}"
+						Style="{StaticResource ButtonStyle}"
+						ToolTip="{Binding Source={StaticResource Language}, Path=ToolTipSetHeader2StyleCommand}">
+						<Run
+							FontFamily="Sans"
+							FontSize="18"
+							FontWeight="Medium">
+							H2
+						</Run>
+					</syncfusion:ButtonAdv>
+					<syncfusion:ButtonAdv
+						Command="syncfusion:SfRichTextBoxAdv.ApplyStyleCommand"
+						CommandParameter="Heading 3"
+						CommandTarget="{Binding ElementName=TextEditor}"
+						Style="{StaticResource ButtonStyle}"
+						ToolTip="{Binding Source={StaticResource Language}, Path=ToolTipSetHeader3StyleCommand}">
+						<Run
+							FontFamily="Sans"
+							FontSize="18"
+							FontWeight="Medium">
+							H3
+						</Run>
+					</syncfusion:ButtonAdv>
+					<syncfusion:ButtonAdv
+						Command="syncfusion:SfRichTextBoxAdv.ApplyStyleCommand"
+						CommandParameter="Heading 4"
+						CommandTarget="{Binding ElementName=TextEditor}"
+						Style="{StaticResource ButtonStyle}"
+						ToolTip="{Binding Source={StaticResource Language}, Path=ToolTipSetHeader4StyleCommand}">
+						<Run
+							FontFamily="Sans"
+							FontSize="18"
+							FontWeight="Medium">
+							H4
+						</Run>
+					</syncfusion:ButtonAdv>
+					<syncfusion:ButtonAdv
+						Command="syncfusion:SfRichTextBoxAdv.ShowStylesDialogCommand"
+						CommandTarget="{Binding ElementName=TextEditor}"
+						Content="{iconPacks:Modern TextSize}"
+						Style="{StaticResource ButtonStyle}"
+						ToolTip="{Binding Source={StaticResource Language}, Path=ToolTipOpenStylesCommand}" />
+				</StackPanel>
+				<!--#endregion-->
+
+				<!--#region Block Quotes & Links-->
+				<StackPanel Margin="0,0,10,0" Orientation="Horizontal">
+					<syncfusion:ButtonAdv
+						Command="{Binding InsertQuote}"
+						Content="{iconPacks:Modern QuoteLeft}"
+						Style="{StaticResource ButtonStyle}"
+						ToolTip="{Binding Source={StaticResource Language}, Path=ToolTipInsertQuoteCommand}" />
+					<syncfusion:ButtonAdv
+						Command="syncfusion:SfRichTextBoxAdv.ShowHyperlinkDialogCommand"
+						CommandTarget="{Binding ElementName=TextEditor}"
+						Content="{iconPacks:Modern Link}"
+						Style="{StaticResource ButtonStyle}"
+						ToolTip="{Binding Source={StaticResource Language}, Path=ToolTipInsertLinkCommand}" />
+				</StackPanel>
+				<!--#endregion-->
+
+				<!--#region Images & Tables-->
+				<StackPanel Margin="0,0,10,0" Orientation="Horizontal">
+					<syncfusion:ButtonAdv
+						Command="syncfusion:SfRichTextBoxAdv.InsertPictureCommand"
+						CommandTarget="{Binding ElementName=TextEditor}"
+						Content="{iconPacks:Modern Image}"
+						Style="{StaticResource ButtonStyle}"
+						ToolTip="{Binding Source={StaticResource Language}, Path=ToolTipInsertImageCommand}" />
+					<syncfusion:ButtonAdv
+						Command="{Binding InsertRemotePicture}"
+						Style="{StaticResource ButtonStyle}"
+						ToolTip="{Binding Source={StaticResource Language}, Path=ToolTipInsertRemoteImageCommand}">
+						<Viewbox Width="18">
+							<Path Data="{StaticResource RemoteImage}" Fill="{DynamicResource MahApps.Brushes.ThemeForeground}" />
+						</Viewbox>
+					</syncfusion:ButtonAdv>
+					<syncfusion:ButtonAdv
+						Command="syncfusion:SfRichTextBoxAdv.ShowInsertTableDialogCommand"
+						CommandTarget="{Binding ElementName=TextEditor}"
+						Style="{StaticResource ButtonStyle}"
+						ToolTip="{Binding Source={StaticResource Language}, Path=ToolTipInsertTableCommand}">
+						<Viewbox Width="18">
+							<Path Data="{StaticResource Table}" Fill="{DynamicResource MahApps.Brushes.ThemeForeground}" />
+						</Viewbox>
+					</syncfusion:ButtonAdv>
+				</StackPanel>
+				<!--#endregion-->
+			</WrapPanel>
+			<syncfusion:ButtonAdv
+				x:Name="PinButton"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Bottom"
+				Click="OnToggleToolbarMode"
+				Style="{StaticResource SeamlessButtonStyle}"
+				ToolTip="{Binding Source={StaticResource Language}, Path=ToolTipToggleToolbarModeCommand}"
+				Visibility="Collapsed">
+				<iconPacks:PackIconModern Kind="{Binding PinIcon}" />
+			</syncfusion:ButtonAdv>
+		</Grid>
+		<!--#endregion-->
+
+		<!--#region Editor-->
+		<controls:StateFullTextEditor
+			x:Name="TextEditor"
+			Grid.Row="1"
+			Padding="40,20,40,400"
+			x:FieldModifier="public"
+			Document="{Binding Document}"
+			DocumentStateChanged="OnEditorDocumentStateChanged"
+			EnableMiniToolBar="False"
+			LayoutType="Continuous"
+			LostFocusBehavior="ShowSelection"
+			OverridesDocumentBackground="True"
+			Style="{DynamicResource RichTextBoxAdvCustomStyle}">
+			<syncfusion:SfRichTextBoxAdv.SpellChecker>
+				<richTextBoxAdv:SpellChecker
+					IgnoreAlphaNumericWords="true"
+					IgnoreURIs="true"
+					IgnoreUppercaseWords="False"
+					IsEnabled="True" />
+			</syncfusion:SfRichTextBoxAdv.SpellChecker>
+			<syncfusion:SfRichTextBoxAdv.LoadAsyncSettings>
+				<syncfusion:LoadAsyncSettings ShowPageNumber="False" />
+			</syncfusion:SfRichTextBoxAdv.LoadAsyncSettings>
+		</controls:StateFullTextEditor>
+		<!--#endregion-->
+
+		<!--#region Status Bar-->
+		<StatusBar x:Name="MainStatusBar" Grid.Row="2">
+			<DockPanel>
+				<StackPanel
+					x:Name="ProcessMessage"
+					Margin="8,0"
+					DockPanel.Dock="Right"
+					Orientation="Horizontal">
+					<mah:ProgressRing
+						Width="14"
+						Height="14"
+						Foreground="White" />
+					<TextBlock
+						x:Name="StatusMessage"
+						Width="400"
+						Margin="8,0"
+						VerticalAlignment="Center"
+						TextAlignment="Left"
+						TextTrimming="CharacterEllipsis" />
+				</StackPanel>
+
+				<StackPanel Margin="8,0" Orientation="Horizontal">
+					<Button
+						Background="Transparent"
+						BorderThickness="0"
+						Command="syncfusion:SfRichTextBoxAdv.ShowSpellingPaneCommand"
+						CommandTarget="{Binding ElementName=TextEditor}"
+						Content="{iconPacks:Modern BookHardcoverOpenWriting}"
+						ToolTip="{Binding Source={StaticResource Language}, Path=ToolTipSpellCheckCommand}" />
+					<ComboBox
+						Background="Transparent"
+						BorderThickness="0"
+						DataContext="{Binding Options}"
+						ItemsSource="{Binding Languages}"
+						SelectedItem="{Binding SelectedLanguage}"
+						SelectionChanged="OnLanguageChanged"
+						ToolTip="{Binding Source={StaticResource Language}, Path=OptionSelectALanguage}" />
+				</StackPanel>
+			</DockPanel>
+
+			<!--#region Develop Control-->
+			<StackPanel Orientation="Horizontal" Visibility="Collapsed">
+				<StackPanel.Resources>
+					<ObjectDataProvider
+						x:Key="PackIconFontAwesomeKinds"
+						MethodName="GetValues"
+						ObjectType="{x:Type iconPacks:PackIconModernKind}">
+						<ObjectDataProvider.MethodParameters>
+							<x:Type TypeName="iconPacks:PackIconModernKind" />
+						</ObjectDataProvider.MethodParameters>
+					</ObjectDataProvider>
+				</StackPanel.Resources>
+				<Image
+					Width="40"
+					Margin="20"
+					VerticalAlignment="Center"
+					Source="{Binding ElementName=PackIconFontAwesomeKinds, Path=SelectedItem, Converter={iconPacks:PackIconModernKindToImageConverter Brush=Black}}" />
+				<ComboBox
+					x:Name="PackIconFontAwesomeKinds"
+					Width="200"
+					VerticalAlignment="Center"
+					ItemsSource="{Binding Source={StaticResource PackIconFontAwesomeKinds}}" />
+			</StackPanel>
+			<!--#endregion-->
+		</StatusBar>
+		<!--#endregion-->
+
+		<!--#region Locker-->
+		<Grid
+			x:Name="Locker"
+			Grid.Row="0"
+			Grid.RowSpan="2"
+			Background="Transparent"
+			Cursor="Wait"
+			Visibility="Visible" />
+		<!--#endregion-->
+	</Grid>
+
+	<!--#region Information-->
+	<mah:MetroWindow.Flyouts>
+		<mah:FlyoutsControl>
+			<!--#region Shortcut List-->
+			<mah:Flyout
+				x:Name="ShortcutsFlyout"
+				Width="640"
+				Header="{Binding Source={StaticResource Language}, Path=LabelShortcutList}"
+				Position="Right">
+				<ScrollViewer
+					HorizontalScrollBarVisibility="Hidden"
+					PanningMode="VerticalOnly"
+					VerticalScrollBarVisibility="Auto">
+					<StackPanel Margin="20">
+						<TextBlock
+							Margin="20,20,20,0"
+							Style="{StaticResource TextBlockHeader}"
+							Text="{Binding Source={StaticResource Language}, Path=LabelMenu}" />
+						<Separator />
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="Ctrl + N" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelNew}" />
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="Ctrl + O" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelOpen}" />
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="Ctrl + S" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelSave}" />
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="Ctrl + P" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelPrint}" />
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="Ctrl + E" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelExport}" />
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="Alt + F4" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelExit}" />
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="F1" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelShortcutList}" />
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="F8" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelAbout}" />
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="F9" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelOptions}" />
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="F10" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelToggleTheme}" />
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="F11" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelToggleFullScreen}" />
+						</DockPanel>
+
+
+						<TextBlock
+							Margin="20,20,20,0"
+							Style="{StaticResource TextBlockHeader}"
+							Text="{Binding Source={StaticResource Language}, Path=LabelQueries}" />
+						<Separator />
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="Ctrl + F" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelFind}" />
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="Ctrl + H" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelFindAndReplace}" />
+						</DockPanel>
+
+						<TextBlock
+							Margin="20,20,20,0"
+							Style="{StaticResource TextBlockHeader}"
+							Text="{Binding Source={StaticResource Language}, Path=LabelTextFormat}" />
+						<Separator />
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="Ctrl + B" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelBold}" />
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="Ctrl + I" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelItalic}" />
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="Ctrl + U" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelUnderline}" />
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="Ctrl + Shift + S" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelStrikeThrough}" />
+						</DockPanel>
+
+						<TextBlock
+							Margin="20,20,20,0"
+							Style="{StaticResource TextBlockHeader}"
+							Text="{Binding Source={StaticResource Language}, Path=LabelLists}" />
+						<Separator />
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="Ctrl + M" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelIncreaseIndent}" />
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="Ctrl + ," />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelDecreaseIndent}" />
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="Ctrl + Alt + L" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelInsetList}" />
+						</DockPanel>
+
+						<TextBlock
+							Margin="20,20,20,0"
+							Style="{StaticResource TextBlockHeader}"
+							Text="{Binding Source={StaticResource Language}, Path=LabelTextStyles}" />
+						<Separator />
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="Ctrl + 0" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelNormal}" />
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="Ctrl + 1" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelHeader1}" />
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="Ctrl + 2" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelHeader2}" />
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="Ctrl + 3" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelHeader3}" />
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="Ctrl + 4" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelHeader4}" />
+						</DockPanel>
+
+						<TextBlock
+							Margin="20,20,20,0"
+							Style="{StaticResource TextBlockHeader}"
+							Text="{Binding Source={StaticResource Language}, Path=LabelReferences}" />
+						<Separator />
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="Ctrl + Q" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelInsertQuote}" />
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="Ctrl + K" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelInsertLink}" />
+						</DockPanel>
+
+						<TextBlock
+							Margin="20,20,20,0"
+							Style="{StaticResource TextBlockHeader}"
+							Text="{Binding Source={StaticResource Language}, Path=LabelGraphicsAndTables}" />
+						<Separator />
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="Ctrl + Shift + I" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelInsertImage}" />
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="Ctrl + Shift + R" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelInsertRemoteImage}" />
+						</DockPanel>
+						<DockPanel Margin="20,0,20,60">
+							<TextBlock DockPanel.Dock="Right" Text="Ctrl + T" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelInsertTable}" />
+						</DockPanel>
+					</StackPanel>
+				</ScrollViewer>
+			</mah:Flyout>
+			<!--#endregion-->
+
+			<!--#region About Clean Editor-->
+			<mah:Flyout
+				x:Name="AboutFlyout"
+				Width="640"
+				Header="{Binding Source={StaticResource Language}, Path=LabelAbout}"
+				Position="Right">
+				<ScrollViewer
+					HorizontalScrollBarVisibility="Hidden"
+					PanningMode="VerticalOnly"
+					VerticalScrollBarVisibility="Auto">
+					<StackPanel x:Name="AboutContent" Margin="40,20,40,40">
+						<TextBlock Margin="0,20" TextAlignment="Center">
+							<Run FontSize="{DynamicResource BaseHeaderFontSize}" FontWeight="Bold">Clean Editor</Run><LineBreak />
+							<Run Text="{Binding Source={StaticResource Language}, Path=LabelVersion, Mode=OneWay}" />
+						</TextBlock>
+
+						<TextBlock
+							Margin="20,20,20,0"
+							Style="{StaticResource TextBlockHeader}"
+							Text="{Binding Source={StaticResource Language}, Path=LabelInformation}" />
+						<Separator />
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="Github" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelSourceCode}" />
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="contact@texoider.com" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelContact}" />
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="readme.md" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelTernsOfUse}" />
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="TEXOIDER" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelCreatedBy}" />
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="10/19/2020" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelCreationDate}" />
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="12/01/2020" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelPublishDate}" />
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right">
+								<Hyperlink
+									NavigateUri="https://github.com/Jerajo"
+									RequestNavigate="OnHyperlinkRequestNavigate"
+									ToolTip="https://github.com/Jerajo">
+									<Run>MIT</Run>
+								</Hyperlink>
+							</TextBlock>
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelLicense}" />
+						</DockPanel>
+
+						<DockPanel Margin="20,20,20,0">
+							<TextBlock
+								DockPanel.Dock="Right"
+								Style="{StaticResource TextBlockHeader}"
+								Text="{Binding Source={StaticResource Language}, Path=LabelLicenses}" />
+							<TextBlock Style="{StaticResource TextBlockHeader}" Text="{Binding Source={StaticResource Language}, Path=LabelLibraries}" />
+						</DockPanel>
+						<Separator />
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right">
+								<Hyperlink
+									NavigateUri="https://github.com/ardalis/GuardClauses/blob/master/LICENSE"
+									RequestNavigate="OnHyperlinkRequestNavigate"
+									ToolTip="https://github.com/ardalis/GuardClauses/blob/master/LICENSE">
+									<Run>MIT</Run>
+								</Hyperlink>
+							</TextBlock>
+							<TextBlock>
+								<Hyperlink
+									NavigateUri="https://github.com/ardalis/GuardClauses"
+									RequestNavigate="OnHyperlinkRequestNavigate"
+									ToolTip="https://github.com/ardalis/GuardClauses">
+									<Run>Ardalis Guard Clauses</Run>
+								</Hyperlink>
+							</TextBlock>
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right">
+								<Hyperlink
+									NavigateUri="https://github.com/MahApps/MahApps.Metro/blob/develop/LICENSE"
+									RequestNavigate="OnHyperlinkRequestNavigate"
+									ToolTip="https://github.com/MahApps/MahApps.Metro/blob/develop/LICENSE">
+									<Run>MIT</Run>
+								</Hyperlink>
+							</TextBlock>
+							<TextBlock>
+								<Hyperlink
+									NavigateUri="https://mahapps.com/"
+									RequestNavigate="OnHyperlinkRequestNavigate"
+									ToolTip="https://mahapps.com/">
+									<Run>Mah Apps Metro</Run>
+								</Hyperlink>
+							</TextBlock>
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right">
+								<Hyperlink
+									NavigateUri="https://github.com/MahApps/MahApps.Metro.IconPacks/blob/develop/LICENSE"
+									RequestNavigate="OnHyperlinkRequestNavigate"
+									ToolTip="https://github.com/MahApps/MahApps.Metro.IconPacks/blob/develop/LICENSE">
+									<Run>MIT</Run>
+								</Hyperlink>
+							</TextBlock>
+							<TextBlock>
+								<Hyperlink
+									NavigateUri="https://github.com/MahApps/MahApps.Metro.IconPacks"
+									RequestNavigate="OnHyperlinkRequestNavigate"
+									ToolTip="https://github.com/MahApps/MahApps.Metro.IconPacks">
+									<Run>Mah Apps Metro IconPacks Modern</Run>
+								</Hyperlink>
+							</TextBlock>
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right">
+								<Hyperlink
+									NavigateUri="https://github.com/Fody/PropertyChanged/blob/master/license.txt"
+									RequestNavigate="OnHyperlinkRequestNavigate"
+									ToolTip="https://github.com/Fody/PropertyChanged/blob/master/license.txt">
+									<Run>MIT</Run>
+								</Hyperlink>
+							</TextBlock>
+							<TextBlock>
+								<Hyperlink
+									NavigateUri="https://github.com/Fody/PropertyChanged"
+									RequestNavigate="OnHyperlinkRequestNavigate"
+									ToolTip="https://github.com/Fody/PropertyChanged">
+									<Run>Property Changed Fody</Run>
+								</Hyperlink>
+							</TextBlock>
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right">
+								<Hyperlink
+									NavigateUri="https://www.syncfusion.com/license/studio/18.3.0.47/syncfusion_essential_studio_eula.pdf"
+									RequestNavigate="OnHyperlinkRequestNavigate"
+									ToolTip="https://www.syncfusion.com/license/studio/18.3.0.47/syncfusion_essential_studio_eula.pdf">
+									<Run>Syncfusion</Run>
+								</Hyperlink>
+							</TextBlock>
+							<TextBlock>
+								<Hyperlink
+									NavigateUri="https://www.syncfusion.com/wpf-ui-controls"
+									RequestNavigate="OnHyperlinkRequestNavigate"
+									ToolTip="https://www.syncfusion.com/wpf-ui-controls">
+									<Run>Syncfusion Rich Text Box</Run>
+								</Hyperlink>
+							</TextBlock>
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right">
+								<Hyperlink
+									NavigateUri="https://www.syncfusion.com/license/studio/18.3.0.47/syncfusion_essential_studio_eula.pdf"
+									RequestNavigate="OnHyperlinkRequestNavigate"
+									ToolTip="https://www.syncfusion.com/license/studio/18.3.0.47/syncfusion_essential_studio_eula.pdf">
+									<Run>Syncfusion</Run>
+								</Hyperlink>
+							</TextBlock>
+							<TextBlock>
+								<Hyperlink
+									NavigateUri="https://www.syncfusion.com/wpf-ui-controls"
+									RequestNavigate="OnHyperlinkRequestNavigate"
+									ToolTip="https://www.syncfusion.com/wpf-ui-controls">
+									<Run>Syncfusion Shared</Run>
+								</Hyperlink>
+							</TextBlock>
+						</DockPanel>
+
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right">
+								<Hyperlink
+									NavigateUri="https://github.com/mysticmind/reversemarkdown-net/blob/master/LICENSE"
+									RequestNavigate="OnHyperlinkRequestNavigate"
+									ToolTip="https://github.com/mysticmind/reversemarkdown-net/blob/master/LICENSE">
+									<Run>MIT</Run>
+								</Hyperlink>
+							</TextBlock>
+							<TextBlock>
+								<Hyperlink
+									NavigateUri="https://github.com/mysticmind/reversemarkdown-net"
+									RequestNavigate="OnHyperlinkRequestNavigate"
+									ToolTip="https://github.com/mysticmind/reversemarkdown-net">
+									<Run>ReverseMarkdown</Run>
+								</Hyperlink>
+							</TextBlock>
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right">
+								<Hyperlink
+									NavigateUri="https://github.com/lunet-io/markdig/blob/master/license.txt"
+									RequestNavigate="OnHyperlinkRequestNavigate"
+									ToolTip="https://github.com/lunet-io/markdig/blob/master/license.txt">
+									<Run>BSD 2-Clause</Run>
+								</Hyperlink>
+							</TextBlock>
+							<TextBlock>
+								<Hyperlink
+									NavigateUri="https://github.com/lunet-io/markdig"
+									RequestNavigate="OnHyperlinkRequestNavigate"
+									ToolTip="https://github.com/lunet-io/markdig">
+									<Run>Markdig</Run>
+								</Hyperlink>
+							</TextBlock>
+						</DockPanel>
+
+						<TextBlock
+							Margin="20,20,20,0"
+							Style="{StaticResource TextBlockHeader}"
+							Text="{Binding Source={StaticResource Language}, Path=LabelDevelopers}" />
+						<Separator />
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right">
+								<Hyperlink
+									NavigateUri="https://github.com/Jerajo"
+									RequestNavigate="OnHyperlinkRequestNavigate"
+									ToolTip="https://github.com/Jerajo">
+									<Run>Github</Run>
+								</Hyperlink>
+							</TextBlock>
+							<TextBlock Text="Jesse Jose" />
+						</DockPanel>
+
+					</StackPanel>
+				</ScrollViewer>
+			</mah:Flyout>
+			<!--#endregion-->
+
+			<!--#region Options-->
+			<mah:Flyout
+				x:Name="OptionsFlyout"
+				Width="640"
+				Header="{Binding Source={StaticResource Language}, Path=LabelOptions}"
+				Position="Right">
+				<ScrollViewer
+					HorizontalScrollBarVisibility="Hidden"
+					PanningMode="VerticalOnly"
+					VerticalScrollBarVisibility="Auto">
+					<StackPanel Margin="20,20,20,40" DataContext="{Binding Options}">
+						<StackPanel Margin="0,10">
+							<Label Content="{Binding Source={StaticResource Language}, Path=LabelLanguage}" Style="{StaticResource LabelHeader}" />
+							<ComboBox
+								ItemsSource="{Binding Languages}"
+								SelectedItem="{Binding SelectedLanguage}"
+								SelectionChanged="OnLanguageChanged"
+								Style="{StaticResource CustomComboBox}"
+								ToolTip="{Binding Source={StaticResource Language}, Path=OptionSelectALanguage}" />
+						</StackPanel>
+
+						<StackPanel Margin="0,10">
+							<Label Content="{Binding Source={StaticResource Language}, Path=LabelFontFamily}" Style="{StaticResource LabelHeader}" />
+							<ComboBox
+								ItemsSource="{Binding FontFamilies}"
+								SelectedItem="{Binding FontFamily}"
+								SelectionChanged="OnFontFamilyChanged"
+								Style="{StaticResource CustomComboBox}"
+								ToolTip="{Binding Source={StaticResource Language}, Path=OptionSelectAFontFamily}" />
+						</StackPanel>
+
+						<StackPanel Margin="0,10">
+							<Label Content="{Binding Source={StaticResource Language}, Path=LabelFontSize}" Style="{StaticResource LabelHeader}" />
+							<mah:NumericUpDown
+								Maximum="100"
+								Minimum="8"
+								Style="{StaticResource BaseFont}"
+								TextAlignment="Left"
+								ToolTip="{Binding Source={StaticResource Language}, Path=OptionSelectAFontSize}"
+								ValueChanged="OnFontSizeChanged"
+								Value="{Binding FontSize}" />
+						</StackPanel>
+
+						<StackPanel Margin="0,10">
+							<Label Content="{Binding Source={StaticResource Language}, Path=LabelTheme}" Style="{StaticResource LabelHeader}" />
+							<ComboBox
+								ItemsSource="{Binding ThemeList}"
+								SelectedItem="{Binding Theme}"
+								SelectionChanged="OnThemeChanged"
+								Style="{StaticResource CustomComboBox}"
+								ToolTip="{Binding Source={StaticResource Language}, Path=OptionSelectATheme}" />
+						</StackPanel>
+
+						<StackPanel Margin="0,10">
+							<Label Content="{Binding Source={StaticResource Language}, Path=LabelScreenMode}" Style="{StaticResource LabelHeader}" />
+							<CheckBox
+								Click="OnFullScreenToggle"
+								Content="{Binding Source={StaticResource Language}, Path=LabelIsFullScreen}"
+								IsChecked="{Binding IsFullScreen}"
+								Style="{StaticResource BaseFont}"
+								ToolTip="{Binding Source={StaticResource Language}, Path=LabelToggleFullScreen}" />
+						</StackPanel>
+
+						<StackPanel Margin="0,10">
+							<Label Content="{Binding Source={StaticResource Language}, Path=LabelTemporalFilesPath}" Style="{StaticResource LabelHeader}" />
+							<DockPanel>
+								<Button
+									Margin="10,0"
+									Click="OnChangeTemporalFilesLocation"
+									Content="{iconPacks:Modern Folder}"
+									DockPanel.Dock="Right"
+									ToolTip="{Binding Source={StaticResource Language}, Path=ToolTipChangeTemporalFilesCommand}" />
+								<TextBox
+									IsReadOnly="True"
+									Style="{StaticResource CustomTextBox}"
+									Text="{Binding TemporalFilesPath}"
+									ToolTip="{Binding Source={StaticResource Language}, Path=OptionCurrentPath}" />
+							</DockPanel>
+						</StackPanel>
+					</StackPanel>
+				</ScrollViewer>
+			</mah:Flyout>
+			<!--#endregion-->
+		</mah:FlyoutsControl>
+	</mah:MetroWindow.Flyouts>
+	<!--#endregion-->
+</mah:MetroWindow>

@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+	  <DisableWinExeOutputInference>true</DisableWinExeOutputInference>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MahApps.Metro" Version="2.3.4" />
+    <PackageReference Include="MahApps.Metro.IconPacks.Modern" Version="4.8.0" />
+    <PackageReference Include="Markdig" Version="0.22.0" />
+    <PackageReference Include="PropertyChanged.Fody" PrivateAssets="All" Version="3.3.1" />
+    <PackageReference Include="ReverseMarkdown" Version="3.14.0" />
+    <PackageReference Include="Syncfusion.SfRichTextBoxAdv.WPF" Version="18.3.0.50" />
+    <PackageReference Include="Syncfusion.Shared.WPF" Version="18.3.0.50" />
+    <PackageReference Include="System.Drawing.Common" Version="5.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Windows.Forms">
+      <HintPath>C:\Program Files\dotnet\packs\Microsoft.WindowsDesktop.App.Ref\5.0.0\ref\net5.0\System.Windows.Forms.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources\Languages\UIText.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>UIText.resx</DependentUpon>
+    </Compile>
+	  <Compile Update="Resources\Syncfusion.SfRichTextBoxAdv.WPF.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>Syncfusion.SfRichTextBoxAdv.WPF.resx</DependentUpon>
+	  </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\Languages\UIText.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>UIText.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Syncfusion.SfRichTextBoxAdv.WPF.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Syncfusion.SfRichTextBoxAdv.WPF.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
