@@ -22,7 +22,7 @@ namespace Cletor.Commands.MenuCommands
             ToolTip = UIText.CommandToolTipSave;
             var gestures = new InputGestureCollection
             {
-                new KeyGesture(Key.S, ModifierKeys.Control)
+                new KeyGesture(Key.S, ModifierKeys.Alt)
             };
             Command = new RoutedUICommand(UIText.CommandHeaderSave, "Command", typeof(SaveCommand), gestures);
             CommandTarget = window;

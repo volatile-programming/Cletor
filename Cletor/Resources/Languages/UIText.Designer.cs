@@ -79,7 +79,7 @@ namespace Cletor.Resources.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Word XML Document (*.xml)|*.xml|Word Document (*.docx)|*.docx|Word Template (*.dotx)|*.dotx|Word 97 - 2003 Document (*.doc)|*.doc|Word 97 - 2003 Template (*.dot)|*.dot|Web Page (*.htm,*.html)|*.htm;*.html|Rich Text File (*.rtf)|*.rtf|Text File (*.txt)|*.txt|Xaml File (*.xaml)|*.xaml|Markdown File (*.md)|*.md.
         /// </summary>
         public static string AllSupportedFilesSave {
             get {
@@ -129,15 +129,6 @@ namespace Cletor.Resources.Languages {
         public static string CommandHeaderExit {
             get {
                 return ResourceManager.GetString("CommandHeaderExit", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to _Export.
-        /// </summary>
-        public static string CommandHeaderExport {
-            get {
-                return ResourceManager.GetString("CommandHeaderExport", resourceCulture);
             }
         }
         
@@ -201,15 +192,6 @@ namespace Cletor.Resources.Languages {
         public static string CommandToolTipExit {
             get {
                 return ResourceManager.GetString("CommandToolTipExit", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Exports the document to html or md format.
-        /// </summary>
-        public static string CommandToolTipExport {
-            get {
-                return ResourceManager.GetString("CommandToolTipExport", resourceCulture);
             }
         }
         
@@ -354,15 +336,6 @@ namespace Cletor.Resources.Languages {
         public static string LabelExit {
             get {
                 return ResourceManager.GetString("LabelExit", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Export.
-        /// </summary>
-        public static string LabelExport {
-            get {
-                return ResourceManager.GetString("LabelExport", resourceCulture);
             }
         }
         
@@ -696,6 +669,15 @@ namespace Cletor.Resources.Languages {
         public static string LabelSourceCode {
             get {
                 return ResourceManager.GetString("LabelSourceCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Spelling Check.
+        /// </summary>
+        public static string LabelSpellingCheck {
+            get {
+                return ResourceManager.GetString("LabelSpellingCheck", resourceCulture);
             }
         }
         

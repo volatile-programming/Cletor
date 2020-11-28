@@ -135,9 +135,6 @@
   <data name="CommandHeaderExit" xml:space="preserve">
 	  <value>_Exit</value>
   </data>
-  <data name="CommandHeaderExport" xml:space="preserve">
-	  <value>_Export</value>
-  </data>
   <data name="CommandHeaderNew" xml:space="preserve">
 	  <value>_New</value>
   </data>
@@ -158,9 +155,6 @@
   </data>
   <data name="CommandToolTipExit" xml:space="preserve">
 	  <value>Closes the application</value>
-  </data>
-  <data name="CommandToolTipExport" xml:space="preserve">
-	  <value>Exports the document to html or md format</value>
   </data>
   <data name="CommandToolTipNew" xml:space="preserve">
 	  <value>Creates a new document</value>
@@ -209,9 +203,6 @@
   </data>
   <data name="LabelExit" xml:space="preserve">
     <value>Exit</value>
-  </data>
-  <data name="LabelExport" xml:space="preserve">
-    <value>Export</value>
   </data>
   <data name="LabelFind" xml:space="preserve">
     <value>Find</value>
@@ -454,7 +445,7 @@
     <value>Normal (Ctrl + 0)</value>
   </data>
   <data name="ToolTipSpellCheckCommand" xml:space="preserve">
-    <value>Shows the spelling pane</value>
+	  <value>Shows the spelling pane (F7)</value>
   </data>
   <data name="ToolTipStrikeThroughCommand" xml:space="preserve">
     <value>Strikethrough (Ctrl + Shift + S)</value>
@@ -488,5 +479,8 @@
   </data>
   <data name="AllSupportedFilesSave" xml:space="preserve">
 	  <value>Word XML Document (*.xml)|*.xml|Word Document (*.docx)|*.docx|Word Template (*.dotx)|*.dotx|Word 97 - 2003 Document (*.doc)|*.doc|Word 97 - 2003 Template (*.dot)|*.dot|Web Page (*.htm,*.html)|*.htm;*.html|Rich Text File (*.rtf)|*.rtf|Text File (*.txt)|*.txt|Xaml File (*.xaml)|*.xaml|Markdown File (*.md)|*.md</value>
+  </data>
+  <data name="LabelSpellingCheck" xml:space="preserve">
+	  <value>Spelling Check</value>
   </data>
 </root>

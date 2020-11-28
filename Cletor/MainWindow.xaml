@@ -70,11 +70,11 @@
 		<KeyBinding
 			Key="S"
 			Command="{Binding Save}"
-			Modifiers="Ctrl" />
+			Modifiers="Alt" />
 		<KeyBinding
 			Key="O"
 			Command="{Binding Open}"
-			Modifiers="Ctrl" />
+			Modifiers="Alt" />
 
 		<KeyBinding
 			Key="S"
@@ -503,11 +503,11 @@
 							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelNew}" />
 						</DockPanel>
 						<DockPanel Margin="20,0">
-							<TextBlock DockPanel.Dock="Right" Text="Ctrl + O" />
+							<TextBlock DockPanel.Dock="Right" Text="Alt + O" />
 							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelOpen}" />
 						</DockPanel>
 						<DockPanel Margin="20,0">
-							<TextBlock DockPanel.Dock="Right" Text="Ctrl + S" />
+							<TextBlock DockPanel.Dock="Right" Text="Alt + S" />
 							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelSave}" />
 						</DockPanel>
 						<DockPanel Margin="20,0">
@@ -515,16 +515,12 @@
 							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelPrint}" />
 						</DockPanel>
 						<DockPanel Margin="20,0">
-							<TextBlock DockPanel.Dock="Right" Text="Ctrl + E" />
-							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelExport}" />
-						</DockPanel>
-						<DockPanel Margin="20,0">
-							<TextBlock DockPanel.Dock="Right" Text="Alt + F4" />
-							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelExit}" />
-						</DockPanel>
-						<DockPanel Margin="20,0">
 							<TextBlock DockPanel.Dock="Right" Text="F1" />
 							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelShortcutList}" />
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="F7" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelSpellingCheck}" />
 						</DockPanel>
 						<DockPanel Margin="20,0">
 							<TextBlock DockPanel.Dock="Right" Text="F8" />
@@ -541,6 +537,10 @@
 						<DockPanel Margin="20,0">
 							<TextBlock DockPanel.Dock="Right" Text="F11" />
 							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelToggleFullScreen}" />
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="Alt + F4" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelExit}" />
 						</DockPanel>
 
 

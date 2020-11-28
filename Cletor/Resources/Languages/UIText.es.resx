@@ -159,9 +159,6 @@
   <data name="LabelExit" xml:space="preserve">
     <value>Salir</value>
   </data>
-  <data name="LabelExport" xml:space="preserve">
-    <value>Exportar</value>
-  </data>
   <data name="LabelFind" xml:space="preserve">
     <value>Buscar</value>
   </data>
@@ -421,16 +418,13 @@
 	  <value>Ruta actual</value>
   </data>
   <data name="ToolTipSpellCheckCommand" xml:space="preserve">
-	  <value>Muestra el panel ortográfico</value>
+	  <value>Muestra el panel ortográfico (F7)</value>
   </data>
   <data name="CommandToolTipAbout" xml:space="preserve">
 	  <value>Muestra información sobre Clean Editor</value>
   </data>
   <data name="CommandToolTipExit" xml:space="preserve">
 	  <value>Cierra la aplicación</value>
-  </data>
-  <data name="CommandToolTipExport" xml:space="preserve">
-	  <value>Exporta el documento a formato html o md</value>
   </data>
   <data name="CommandToolTipNew" xml:space="preserve">
 	  <value>Crea un nuevo documento</value>
@@ -452,9 +446,6 @@
   </data>
   <data name="CommandHeaderExit" xml:space="preserve">
 	  <value>_Salir</value>
-  </data>
-  <data name="CommandHeaderExport" xml:space="preserve">
-	  <value>_Exportar</value>
   </data>
   <data name="CommandHeaderNew" xml:space="preserve">
 	  <value>_Nuevo</value>
@@ -488,5 +479,8 @@
   </data>
   <data name="AllSupportedFilesSave" xml:space="preserve">
 	  <value>Documento de Word XML (*.xml)|*.xml|Documento de Word (*.docx)|*.docx|Plantilla de Word (*.dotx)|*.dotx|Word 97 - 2003 Documento (*.doc)|*.doc|Word 97 - 2003 Platilla (*.dot)|*.dot|Página Web (*.htm,*.html)|*.htm;*.html|Archivo de texto enriquecido (*.rtf)|*.rtf|Archivo de texto (*.txt)|*.txt|Archivo Xaml (*.xaml)|*.xaml|Archivo de reducción (*.md)|*.md</value>
+  </data>
+  <data name="LabelSpellingCheck" xml:space="preserve">
+	  <value>Comprobación ortográfica</value>
   </data>
 </root>
