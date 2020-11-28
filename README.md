@@ -1,7 +1,23 @@
+![clean editor logo][cletor]
 
 # __Clean Editor__ 
 
-**Clean editor** is a distraction **free** editor for md, docx, html, xml and more. Created for the **Volatile Programing** organization.
+A distraction **free** editor for md, docx, html, xml and more. Created for the **Volatile Programing** organization.
+
+## Screenshots
+![normal editor][normal]
+
+### Zen Mode
+![zen mode][zen-mode]
+
+### Dark and light themes
+![ligh and dark][themes]
+
+### Multilanguage
+![multy language][languages]
+
+### Options
+![https://imgur.com/V1W4jP3][options]
 
 ## Shortcuts
 
@@ -14,6 +30,8 @@
 | Open | Alt + O |
 | Save | Alt + S |
 | Print | Ctrl + P |
+| Undo | Ctrl + Z |
+| Redo | Ctrl + Y |
 | Help | F1 |
 | Spelling Check | F7 |
 | About | F8 |
@@ -93,6 +111,13 @@ You can help the Volatile Programing organization make more projects like this b
 ## Installer Windows 10
 
 You can download the installer from the [release][release] section.
+
+[cletor]: https://imgur.com/Pr3FdrR.png
+[normal]: https://imgur.com/V1W4jP3.png
+[zen-mode]: https://imgur.com/PCaP4M4.png
+[themes]: https://imgur.com/KimBSrQ.png
+[languages]: https://imgur.com/tFznMfO.png
+[options]: https://imgur.com/TMvahsH.png
 
 [paypal]: https://www.paypal.com/donate?hosted_button_id=5E3AK47NWSRKS
 [release]: https://github.com/Jerajo/Clean-Editor/releases/tag/1.0.0
