@@ -98,16 +98,11 @@ organization.
 
 You can clone the project and make pull requests with your contributions, also if you find and bug you can make an open a issue.
 
-You can help the Volatile Programing organization make more projects like this by donning on
-
-[PayPal](https://www.paypal.com/donate?hosted_button_id=5E3AK47NWSRKS)
-
-or becoming a sponsor on Patreon.
+You can help the Volatile Programing organization make more projects like this by donning on [PayPal][paypal] or becoming a sponsor on Patreon.
 
 ## Installer Windows 10
 
-You can download the installer from the
+You can download the installer from the [release][release] section.
 
-[release](https://github.com/Jerajo/Clean-Editor)
-
-section.
+[paypal]: https://www.paypal.com/donate?hosted_button_id=5E3AK47NWSRKS
+[release]: https://github.com/Jerajo/Clean-Editor/releases/tag/1.0.0
