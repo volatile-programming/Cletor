@@ -2,6 +2,10 @@ namespace Cletor.Resources
 {
     public static class Constants
     {
+        // 18.3.0.50
+        // TODO: add your custom key here.
+        internal const string SyncfusionKey = "";
+
         public const string AppRegistryKey = @"SOFTWARE\Cletor";
 
         public const string TemporalFilesKey = "TemporalFilesPath";
@@ -50,9 +54,5 @@ namespace Cletor.Resources
 
         public const string MahAppsColorsGray3 = "MahApps.Colors.Gray3";
         public const string MahAppsColorsGray9 = "MahApps.Colors.Gray9";
-
-        // 18.3.0.50
-        // TODO: add your custom key here.
-        internal const string SyncfusionKey = "";
     }
 }
