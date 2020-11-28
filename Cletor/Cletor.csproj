@@ -1,11 +1,50 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
 	  <DisableWinExeOutputInference>true</DisableWinExeOutputInference>
+	  <ApplicationIcon>Icon.ico</ApplicationIcon>
+	  <Company>Volatile Programing</Company>
+	  <Product>Clean Editor</Product>
+	  <Authors>Jerajo</Authors>
+	  <Description>A distraction free editor for md, docx, html, xml and more.</Description>
+	  <Copyright>MIT</Copyright>
+	  <PackageProjectUrl>https://github.com/Jerajo/Clean-Editor</PackageProjectUrl>
+	  <PackageIcon>Icon.png</PackageIcon>
+	  <RepositoryUrl>https://github.com/Jerajo/Clean-Editor</RepositoryUrl>
+	  <PackageTags>Code Editor;MD;XML;docx;HTML</PackageTags>
+	  <PackageReleaseNotes>Fist Release v1.0.0</PackageReleaseNotes>
+	  <NeutralLanguage>en</NeutralLanguage>
+	  <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+	  <SignAssembly>false</SignAssembly>
+	  <EnforceCodeStyleInBuild>false</EnforceCodeStyleInBuild>
+	  <Platforms>AnyCPU;x64;x86</Platforms>
   </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="README.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="README.md">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="MahApps.Metro" Version="2.3.4" />
@@ -46,6 +85,13 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Syncfusion.SfRichTextBoxAdv.WPF.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\Icon.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
