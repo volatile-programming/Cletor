@@ -1,17 +1,7 @@
 
 # __Clean Editor__ 
 
-**Clean editor**
-
-is a distraction
-
-**free**
-
-editor for md, docx, html, xml and more. Created for the
-
-**Volatile Programing**
-
-organization.
+**Clean editor** is a distraction **free** editor for md, docx, html, xml and more. Created for the **Volatile Programing** organization.
 
 ## Shortcuts
 
