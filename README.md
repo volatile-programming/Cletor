@@ -120,4 +120,4 @@ You can download the installer from the [release][release] section.
 [options]: https://imgur.com/TMvahsH.png
 
 [paypal]: https://www.paypal.com/donate?hosted_button_id=5E3AK47NWSRKS
-[release]: https://github.com/Jerajo/Clean-Editor/releases/tag/1.0.0
+[release]: https://github.com/Jerajo/CleanEditor/releases/tag/1.0.1
