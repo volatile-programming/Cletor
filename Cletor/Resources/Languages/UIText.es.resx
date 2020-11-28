@@ -298,7 +298,7 @@
     <value>Subrayado</value>
   </data>
   <data name="LabelVersion" xml:space="preserve">
-    <value>Versión: 0.0.1</value>
+	  <value>Versión: 1.0.1</value>
   </data>
   <data name="LanguageEnglish" xml:space="preserve">
     <value>Ingles</value>
@@ -482,5 +482,14 @@
   </data>
   <data name="LabelSpellingCheck" xml:space="preserve">
 	  <value>Comprobación ortográfica</value>
+  </data>
+  <data name="LabelHelp" xml:space="preserve">
+	  <value>Ayuda</value>
+  </data>
+  <data name="LabelRedo" xml:space="preserve">
+	  <value>Deshacer</value>
+  </data>
+  <data name="LabelUndo" xml:space="preserve">
+	  <value>Rehacer</value>
   </data>
 </root>

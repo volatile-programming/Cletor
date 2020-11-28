@@ -421,6 +421,15 @@ namespace Cletor.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Help.
+        /// </summary>
+        public static string LabelHelp {
+            get {
+                return ResourceManager.GetString("LabelHelp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Increase Indent.
         /// </summary>
         public static string LabelIncreaseIndent {
@@ -628,6 +637,15 @@ namespace Cletor.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string LabelRedo {
+            get {
+                return ResourceManager.GetString("LabelRedo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to References.
         /// </summary>
         public static string LabelReferences {
@@ -759,6 +777,15 @@ namespace Cletor.Resources.Languages {
         public static string LabelUnderline {
             get {
                 return ResourceManager.GetString("LabelUnderline", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Undo.
+        /// </summary>
+        public static string LabelUndo {
+            get {
+                return ResourceManager.GetString("LabelUndo", resourceCulture);
             }
         }
         
@@ -1105,7 +1132,7 @@ namespace Cletor.Resources.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Shows the spelling pane.
+        ///   Looks up a localized string similar to Shows the spelling pane (F7).
         /// </summary>
         public static string ToolTipSpellCheckCommand {
             get {

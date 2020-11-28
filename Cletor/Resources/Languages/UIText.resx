@@ -295,7 +295,7 @@
     <value>Print</value>
   </data>
   <data name="LabelPublishDate" xml:space="preserve">
-    <value>Publish date:</value>
+	  <value>Publish Date:</value>
   </data>
   <data name="LabelQueries" xml:space="preserve">
     <value>Queries</value>
@@ -343,7 +343,7 @@
     <value>Underline</value>
   </data>
   <data name="LabelVersion" xml:space="preserve">
-    <value>Version: 0.0.1</value>
+	  <value>Version: 1.0.1</value>
   </data>
   <data name="LanguageEnglish" xml:space="preserve">
     <value>English</value>
@@ -482,5 +482,14 @@
   </data>
   <data name="LabelSpellingCheck" xml:space="preserve">
 	  <value>Spelling Check</value>
+  </data>
+  <data name="LabelHelp" xml:space="preserve">
+	  <value>Help</value>
+  </data>
+  <data name="LabelUndo" xml:space="preserve">
+	  <value>Undo</value>
+  </data>
+  <data name="LabelRedo" xml:space="preserve">
+	  <value>Redo</value>
   </data>
 </root>

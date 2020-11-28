@@ -298,7 +298,7 @@
     <value>Souligner</value>
   </data>
   <data name="LabelVersion" xml:space="preserve">
-    <value>Version: 0.0.1</value>
+	  <value>Version: 1.0.1</value>
   </data>
   <data name="LanguageEnglish" xml:space="preserve">
     <value>Anglais</value>
@@ -482,5 +482,14 @@
   </data>
   <data name="LabelSpellingCheck" xml:space="preserve">
 	  <value>Vérification de l’orthographe</value>
+  </data>
+  <data name="LabelHelp" xml:space="preserve">
+	  <value>Aide</value>
+  </data>
+  <data name="LabelRedo" xml:space="preserve">
+	  <value>Annuler</value>
+  </data>
+  <data name="LabelUndo" xml:space="preserve">
+	  <value>Refaire</value>
   </data>
 </root>
