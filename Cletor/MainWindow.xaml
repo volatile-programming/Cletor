@@ -381,12 +381,14 @@
 			Grid.Row="1"
 			Padding="40,20,40,400"
 			x:FieldModifier="public"
+			CaretBrush="{DynamicResource MahApps.Brushes.ThemeForeground}"
 			Document="{Binding Document}"
 			DocumentStateChanged="OnEditorDocumentStateChanged"
 			EnableMiniToolBar="False"
 			LayoutType="Continuous"
 			LostFocusBehavior="ShowSelection"
 			OverridesDocumentBackground="True"
+			SelectionBrush="{DynamicResource MahApps.Brushes.Gray5}"
 			Style="{DynamicResource RichTextBoxAdvCustomStyle}">
 			<syncfusion:SfRichTextBoxAdv.SpellChecker>
 				<richTextBoxAdv:SpellChecker
@@ -515,8 +517,16 @@
 							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelPrint}" />
 						</DockPanel>
 						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="Ctrl + Z" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelUndo}" />
+						</DockPanel>
+						<DockPanel Margin="20,0">
+							<TextBlock DockPanel.Dock="Right" Text="Ctrl + Y" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelRedo}" />
+						</DockPanel>
+						<DockPanel Margin="20,0">
 							<TextBlock DockPanel.Dock="Right" Text="F1" />
-							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelShortcutList}" />
+							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelHelp}" />
 						</DockPanel>
 						<DockPanel Margin="20,0">
 							<TextBlock DockPanel.Dock="Right" Text="F7" />
@@ -682,19 +692,33 @@
 							Text="{Binding Source={StaticResource Language}, Path=LabelInformation}" />
 						<Separator />
 						<DockPanel Margin="20,0">
-							<TextBlock DockPanel.Dock="Right" Text="Github" />
+							<TextBlock DockPanel.Dock="Right">
+								<Hyperlink
+									NavigateUri="https://github.com/Jerajo/CleanEditor/tree/master"
+									RequestNavigate="OnHyperlinkRequestNavigate"
+									ToolTip="https://github.com/Jerajo/CleanEditor/tree/master">
+									<Run>Github</Run>
+								</Hyperlink>
+							</TextBlock>
 							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelSourceCode}" />
 						</DockPanel>
 						<DockPanel Margin="20,0">
-							<TextBlock DockPanel.Dock="Right" Text="contact@texoider.com" />
+							<TextBlock DockPanel.Dock="Right" Text="jessejose@outlook.es" />
 							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelContact}" />
 						</DockPanel>
 						<DockPanel Margin="20,0">
-							<TextBlock DockPanel.Dock="Right" Text="readme.md" />
+							<TextBlock DockPanel.Dock="Right">
+								<Hyperlink
+									NavigateUri="https://github.com/Jerajo/CleanEditor/blob/master/INSTALLER-LICENCE.md"
+									RequestNavigate="OnHyperlinkRequestNavigate"
+									ToolTip="https://github.com/Jerajo/CleanEditor/blob/master/INSTALLER-LICENCE.md">
+									<Run>Creative Commons</Run>
+								</Hyperlink>
+							</TextBlock>
 							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelTernsOfUse}" />
 						</DockPanel>
 						<DockPanel Margin="20,0">
-							<TextBlock DockPanel.Dock="Right" Text="TEXOIDER" />
+							<TextBlock DockPanel.Dock="Right" Text="Volatile Programing" />
 							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelCreatedBy}" />
 						</DockPanel>
 						<DockPanel Margin="20,0">
@@ -702,15 +726,15 @@
 							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelCreationDate}" />
 						</DockPanel>
 						<DockPanel Margin="20,0">
-							<TextBlock DockPanel.Dock="Right" Text="12/01/2020" />
+							<TextBlock DockPanel.Dock="Right" Text="27/11/2020" />
 							<TextBlock Text="{Binding Source={StaticResource Language}, Path=LabelPublishDate}" />
 						</DockPanel>
 						<DockPanel Margin="20,0">
 							<TextBlock DockPanel.Dock="Right">
 								<Hyperlink
-									NavigateUri="https://github.com/Jerajo"
+									NavigateUri="https://github.com/Jerajo/CleanEditor/blob/master/LICENSE"
 									RequestNavigate="OnHyperlinkRequestNavigate"
-									ToolTip="https://github.com/Jerajo">
+									ToolTip="https://github.com/Jerajo/CleanEditor/blob/master/LICENSE">
 									<Run>MIT</Run>
 								</Hyperlink>
 							</TextBlock>
