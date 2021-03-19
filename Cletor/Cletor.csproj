@@ -1,26 +1,26 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
-	  <DisableWinExeOutputInference>true</DisableWinExeOutputInference>
-	  <ApplicationIcon>Icon.ico</ApplicationIcon>
-	  <Company>Volatile Programing</Company>
-	  <Product>Clean Editor</Product>
-	  <Authors>Jerajo</Authors>
-	  <Description>A distraction free editor for md, docx, html, xml and more.</Description>
-	  <Copyright>MIT</Copyright>
-	  <PackageProjectUrl>https://github.com/Jerajo/Clean-Editor</PackageProjectUrl>
-	  <PackageIcon>Icon.png</PackageIcon>
-	  <RepositoryUrl>https://github.com/Jerajo/Clean-Editor</RepositoryUrl>
-	  <PackageTags>Code Editor;MD;XML;docx;HTML</PackageTags>
-	  <PackageReleaseNotes>Fist Release v1.0.0</PackageReleaseNotes>
-	  <NeutralLanguage>en</NeutralLanguage>
-	  <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-	  <SignAssembly>false</SignAssembly>
-	  <EnforceCodeStyleInBuild>false</EnforceCodeStyleInBuild>
-	  <Platforms>AnyCPU;x64;x86</Platforms>
+    <DisableWinExeOutputInference>true</DisableWinExeOutputInference>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+    <Company>Volatile Programing</Company>
+    <Product>Clean Editor</Product>
+    <Authors>Jerajo</Authors>
+    <Description>A distraction free editor for md, docx, html, xml and more.</Description>
+    <Copyright>MIT</Copyright>
+    <PackageProjectUrl>https://github.com/Jerajo/Clean-Editor</PackageProjectUrl>
+    <PackageIcon>Icon.png</PackageIcon>
+    <RepositoryUrl>https://github.com/Jerajo/Clean-Editor</RepositoryUrl>
+    <PackageTags>Code Editor;MD;XML;docx;HTML</PackageTags>
+    <PackageReleaseNotes>Fist Release v1.0.0</PackageReleaseNotes>
+    <NeutralLanguage>en</NeutralLanguage>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <SignAssembly>false</SignAssembly>
+    <EnforceCodeStyleInBuild>false</EnforceCodeStyleInBuild>
+    <Platforms>AnyCPU;x64;x86</Platforms>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -69,11 +69,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>UIText.resx</DependentUpon>
     </Compile>
-	  <Compile Update="Resources\Syncfusion.SfRichTextBoxAdv.WPF.Designer.cs">
-		  <DesignTime>True</DesignTime>
-		  <AutoGen>True</AutoGen>
-		  <DependentUpon>Syncfusion.SfRichTextBoxAdv.WPF.resx</DependentUpon>
-	  </Compile>
+    <Compile Update="Resources\Syncfusion.SfRichTextBoxAdv.WPF.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Syncfusion.SfRichTextBoxAdv.WPF.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
