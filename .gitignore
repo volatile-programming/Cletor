@@ -87,7 +87,6 @@ StyleCopReport.xml
 *.pidb
 *.svclog
 *.scc
-*.ini
 
 # Chutzpah Test files
 _Chutzpah*
@@ -340,3 +339,7 @@ ASALocalRun/
 # BeatPulse healthcheck temp database
 healthchecksdb
 /Clean Editor Installer
+
+# Files
+desktop.ini
+Constants.cs
