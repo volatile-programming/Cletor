@@ -7,6 +7,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cletor", "cletor\Cletor.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cletor.Tests", "Cletor.Tests\Cletor.Tests.csproj", "{43DA7303-6DCF-4F4B-BEA1-860CD9AA0991}"
 EndProject
+Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "Clean Editor Installer", "Clean Editor Installer\Clean Editor Installer.aiproj", "{3A005109-D30D-479D-9760-6CC60DDDCEDD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D3C80D61-AD14-4DB9-9F20-C594A41C48B8}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		All|Any CPU = All|Any CPU
@@ -15,6 +23,9 @@ Global
 		Debug|Any CPU = Debug|Any CPU
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
+		DefaultBuild|Any CPU = DefaultBuild|Any CPU
+		DefaultBuild|x64 = DefaultBuild|x64
+		DefaultBuild|x86 = DefaultBuild|x86
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
@@ -32,6 +43,12 @@ Global
 		{E18E89FF-0D36-41F5-BD43-76636282893E}.Debug|x64.Build.0 = Debug|x64
 		{E18E89FF-0D36-41F5-BD43-76636282893E}.Debug|x86.ActiveCfg = Debug|x86
 		{E18E89FF-0D36-41F5-BD43-76636282893E}.Debug|x86.Build.0 = Debug|x86
+		{E18E89FF-0D36-41F5-BD43-76636282893E}.DefaultBuild|Any CPU.ActiveCfg = Debug|Any CPU
+		{E18E89FF-0D36-41F5-BD43-76636282893E}.DefaultBuild|Any CPU.Build.0 = Debug|Any CPU
+		{E18E89FF-0D36-41F5-BD43-76636282893E}.DefaultBuild|x64.ActiveCfg = Debug|x64
+		{E18E89FF-0D36-41F5-BD43-76636282893E}.DefaultBuild|x64.Build.0 = Debug|x64
+		{E18E89FF-0D36-41F5-BD43-76636282893E}.DefaultBuild|x86.ActiveCfg = Debug|x86
+		{E18E89FF-0D36-41F5-BD43-76636282893E}.DefaultBuild|x86.Build.0 = Debug|x86
 		{E18E89FF-0D36-41F5-BD43-76636282893E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E18E89FF-0D36-41F5-BD43-76636282893E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E18E89FF-0D36-41F5-BD43-76636282893E}.Release|x64.ActiveCfg = Release|x64
@@ -50,19 +67,49 @@ Global
 		{43DA7303-6DCF-4F4B-BEA1-860CD9AA0991}.Debug|x64.Build.0 = Debug|x64
 		{43DA7303-6DCF-4F4B-BEA1-860CD9AA0991}.Debug|x86.ActiveCfg = Debug|x86
 		{43DA7303-6DCF-4F4B-BEA1-860CD9AA0991}.Debug|x86.Build.0 = Debug|x86
+		{43DA7303-6DCF-4F4B-BEA1-860CD9AA0991}.DefaultBuild|Any CPU.ActiveCfg = Debug|Any CPU
+		{43DA7303-6DCF-4F4B-BEA1-860CD9AA0991}.DefaultBuild|Any CPU.Build.0 = Debug|Any CPU
+		{43DA7303-6DCF-4F4B-BEA1-860CD9AA0991}.DefaultBuild|x64.ActiveCfg = Debug|x64
+		{43DA7303-6DCF-4F4B-BEA1-860CD9AA0991}.DefaultBuild|x64.Build.0 = Debug|x64
+		{43DA7303-6DCF-4F4B-BEA1-860CD9AA0991}.DefaultBuild|x86.ActiveCfg = Debug|x86
+		{43DA7303-6DCF-4F4B-BEA1-860CD9AA0991}.DefaultBuild|x86.Build.0 = Debug|x86
 		{43DA7303-6DCF-4F4B-BEA1-860CD9AA0991}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43DA7303-6DCF-4F4B-BEA1-860CD9AA0991}.Release|Any CPU.Build.0 = Release|Any CPU
 		{43DA7303-6DCF-4F4B-BEA1-860CD9AA0991}.Release|x64.ActiveCfg = Release|x64
 		{43DA7303-6DCF-4F4B-BEA1-860CD9AA0991}.Release|x64.Build.0 = Release|x64
 		{43DA7303-6DCF-4F4B-BEA1-860CD9AA0991}.Release|x86.ActiveCfg = Release|x86
 		{43DA7303-6DCF-4F4B-BEA1-860CD9AA0991}.Release|x86.Build.0 = Release|x86
+		{3A005109-D30D-479D-9760-6CC60DDDCEDD}.All|Any CPU.ActiveCfg = DefaultBuild
+		{3A005109-D30D-479D-9760-6CC60DDDCEDD}.All|Any CPU.Build.0 = DefaultBuild
+		{3A005109-D30D-479D-9760-6CC60DDDCEDD}.All|x64.ActiveCfg = DefaultBuild
+		{3A005109-D30D-479D-9760-6CC60DDDCEDD}.All|x64.Build.0 = DefaultBuild
+		{3A005109-D30D-479D-9760-6CC60DDDCEDD}.All|x86.ActiveCfg = DefaultBuild
+		{3A005109-D30D-479D-9760-6CC60DDDCEDD}.All|x86.Build.0 = DefaultBuild
+		{3A005109-D30D-479D-9760-6CC60DDDCEDD}.Debug|Any CPU.ActiveCfg = DefaultBuild
+		{3A005109-D30D-479D-9760-6CC60DDDCEDD}.Debug|Any CPU.Build.0 = DefaultBuild
+		{3A005109-D30D-479D-9760-6CC60DDDCEDD}.Debug|x64.ActiveCfg = DefaultBuild
+		{3A005109-D30D-479D-9760-6CC60DDDCEDD}.Debug|x64.Build.0 = DefaultBuild
+		{3A005109-D30D-479D-9760-6CC60DDDCEDD}.Debug|x86.ActiveCfg = DefaultBuild
+		{3A005109-D30D-479D-9760-6CC60DDDCEDD}.Debug|x86.Build.0 = DefaultBuild
+		{3A005109-D30D-479D-9760-6CC60DDDCEDD}.DefaultBuild|Any CPU.ActiveCfg = DefaultBuild
+		{3A005109-D30D-479D-9760-6CC60DDDCEDD}.DefaultBuild|Any CPU.Build.0 = DefaultBuild
+		{3A005109-D30D-479D-9760-6CC60DDDCEDD}.DefaultBuild|x64.ActiveCfg = DefaultBuild
+		{3A005109-D30D-479D-9760-6CC60DDDCEDD}.DefaultBuild|x64.Build.0 = DefaultBuild
+		{3A005109-D30D-479D-9760-6CC60DDDCEDD}.DefaultBuild|x86.ActiveCfg = DefaultBuild
+		{3A005109-D30D-479D-9760-6CC60DDDCEDD}.DefaultBuild|x86.Build.0 = DefaultBuild
+		{3A005109-D30D-479D-9760-6CC60DDDCEDD}.Release|Any CPU.ActiveCfg = DefaultBuild
+		{3A005109-D30D-479D-9760-6CC60DDDCEDD}.Release|Any CPU.Build.0 = DefaultBuild
+		{3A005109-D30D-479D-9760-6CC60DDDCEDD}.Release|x64.ActiveCfg = DefaultBuild
+		{3A005109-D30D-479D-9760-6CC60DDDCEDD}.Release|x64.Build.0 = DefaultBuild
+		{3A005109-D30D-479D-9760-6CC60DDDCEDD}.Release|x86.ActiveCfg = DefaultBuild
+		{3A005109-D30D-479D-9760-6CC60DDDCEDD}.Release|x86.Build.0 = DefaultBuild
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {CB681D1F-ED9D-4079-BDD7-CACF17347114}
-		RESX_SortFileContentOnSave = True
 		RESX_ResXSortingComparison = CurrentCultureIgnoreCase
+		RESX_SortFileContentOnSave = True
+		SolutionGuid = {CB681D1F-ED9D-4079-BDD7-CACF17347114}
 	EndGlobalSection
 EndGlobal
