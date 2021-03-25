@@ -2,7 +2,7 @@
 
 # __Clean Editor__ 
 
-A distraction **free** editor for md, docx, html, xml and more. Created for the **Volatile Programing** organization.
+A **distraction-free** editor for files in .md, .docx, .html, .xml formats among others.
 
 ## Screenshots
 ![normal editor][normal]
