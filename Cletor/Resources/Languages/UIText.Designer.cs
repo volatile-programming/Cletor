@@ -619,7 +619,7 @@ namespace Cletor.Resources.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Publish date:.
+        ///   Looks up a localized string similar to Publish Date:.
         /// </summary>
         public static string LabelPublishDate {
             get {
@@ -637,7 +637,7 @@ namespace Cletor.Resources.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Redo.
         /// </summary>
         public static string LabelRedo {
             get {
@@ -790,7 +790,7 @@ namespace Cletor.Resources.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Version: 0.0.1.
+        ///   Looks up a localized string similar to Version: 1.0.1.
         /// </summary>
         public static string LabelVersion {
             get {
