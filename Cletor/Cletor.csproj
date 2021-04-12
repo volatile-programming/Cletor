@@ -9,18 +9,21 @@
     <Company>Volatile Programing</Company>
     <Product>Clean Editor</Product>
     <Authors>Jerajo</Authors>
-    <Description>A distraction free editor for md, docx, html, xml and more.</Description>
+    <Description>A distraction-free editor for files in .md, .docx, .html, .xml formats among others.</Description>
     <Copyright>MIT</Copyright>
     <PackageProjectUrl>https://github.com/Jerajo/Clean-Editor</PackageProjectUrl>
     <PackageIcon>Icon.png</PackageIcon>
-    <RepositoryUrl>https://github.com/Jerajo/Clean-Editor</RepositoryUrl>
-    <PackageTags>Code Editor;MD;XML;docx;HTML</PackageTags>
-    <PackageReleaseNotes>Fist Release v1.0.0</PackageReleaseNotes>
+    <RepositoryUrl>https://github.com/volatile-programming/CleanEditor</RepositoryUrl>
+    <PackageTags>Text-Editor;MD;XML;docx;HTML;Zen-Mode;</PackageTags>
+    <PackageReleaseNotes>Added the avility to export .md formatted files to .txt, .pdf and .docx files.</PackageReleaseNotes>
     <NeutralLanguage>en</NeutralLanguage>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <SignAssembly>false</SignAssembly>
     <EnforceCodeStyleInBuild>false</EnforceCodeStyleInBuild>
     <Platforms>AnyCPU;x64;x86</Platforms>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <RepositoryType>Open Source</RepositoryType>
+    <StartupObject>Cletor.App</StartupObject>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
@@ -29,6 +32,7 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile></DocumentationFile>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -38,6 +42,10 @@
 
   <ItemGroup>
     <None Remove="README.md" />
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
