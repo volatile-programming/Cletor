@@ -338,7 +338,9 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
-/Clean Editor Installer
+
+# Folders
+/Cletor.Packaging
 
 # Files
 desktop.ini
