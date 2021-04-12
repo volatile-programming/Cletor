@@ -185,8 +185,8 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		RESX_ResXSortingComparison = CurrentCultureIgnoreCase
-		RESX_SortFileContentOnSave = True
 		SolutionGuid = {CB681D1F-ED9D-4079-BDD7-CACF17347114}
+		RESX_SortFileContentOnSave = True
+		RESX_ResXSortingComparison = CurrentCultureIgnoreCase
 	EndGlobalSection
 EndGlobal
