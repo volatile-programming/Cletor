@@ -799,6 +799,15 @@ namespace Cletor.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Website.
+        /// </summary>
+        public static string LabelWeb {
+            get {
+                return ResourceManager.GetString("LabelWeb", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to English.
         /// </summary>
         public static string LanguageEnglish {

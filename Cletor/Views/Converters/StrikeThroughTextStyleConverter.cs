@@ -1,4 +1,4 @@
-﻿using Syncfusion.Windows.Controls.RichTextBoxAdv;
+using Syncfusion.Windows.Controls.RichTextBoxAdv;
 using System;
 using System.Globalization;
 using System.Windows.Data;

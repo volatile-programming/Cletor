@@ -9,6 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cletor.Tests", "Cletor.Test
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D3C80D61-AD14-4DB9-9F20-C594A41C48B8}"
 	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
 		.gitattributes = .gitattributes
 		.gitignore = .gitignore
 		LICENSE = LICENSE
@@ -185,8 +186,8 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {CB681D1F-ED9D-4079-BDD7-CACF17347114}
-		RESX_SortFileContentOnSave = True
 		RESX_ResXSortingComparison = CurrentCultureIgnoreCase
+		RESX_SortFileContentOnSave = True
+		SolutionGuid = {CB681D1F-ED9D-4079-BDD7-CACF17347114}
 	EndGlobalSection
 EndGlobal
