@@ -120,6 +120,12 @@
   <data name="AffirmativeButtonText" xml:space="preserve">
     <value>Yes</value>
   </data>
+  <data name="AllSupportedFiles" xml:space="preserve">
+	  <value>All supported files (*.xml,*.docx,*.dotx,*.doc,*.dot,*.htm,*.html,*.rtf,*.txt,*.xaml,*.md)|*.xml;*.docx;*.dotx;*.doc;*.dot;*.htm;*.html;*.rtf;*.txt;*.xaml;*.md|Word XML Document (*.xml)|*.xml|Word Document (*.docx)|*.docx|Word Template (*.dotx)|*.dotx|Word 97 - 2003 Document (*.doc)|*.doc|Word 97 - 2003 Template (*.dot)|*.dot|Web Page (*.htm,*.html)|*.htm;*.html|Rich Text File (*.rtf)|*.rtf|Text File (*.txt)|*.txt|Xaml File (*.xaml)|*.xaml|Markdown File (*.md)|*.md</value>
+  </data>
+  <data name="AllSupportedFilesSave" xml:space="preserve">
+	  <value>Word XML Document (*.xml)|*.xml|Word Document (*.docx)|*.docx|Word Template (*.dotx)|*.dotx|Word 97 - 2003 Document (*.doc)|*.doc|Word 97 - 2003 Template (*.dot)|*.dot|Web Page (*.htm,*.html)|*.htm;*.html|Rich Text File (*.rtf)|*.rtf|Text File (*.txt)|*.txt|Xaml File (*.xaml)|*.xaml|Markdown File (*.md)|*.md</value>
+  </data>
   <data name="CancelButtonText" xml:space="preserve">
     <value>Cancel</value>
   </data>
@@ -231,6 +237,9 @@
   <data name="LabelHeader4" xml:space="preserve">
     <value>Header 4</value>
   </data>
+  <data name="LabelHelp" xml:space="preserve">
+	  <value>Help</value>
+  </data>
   <data name="LabelIncreaseIndent" xml:space="preserve">
     <value>Increase Indent</value>
   </data>
@@ -300,6 +309,9 @@
   <data name="LabelQueries" xml:space="preserve">
     <value>Queries</value>
   </data>
+  <data name="LabelRedo" xml:space="preserve">
+	  <value>Redo</value>
+  </data>
   <data name="LabelReferences" xml:space="preserve">
     <value>References</value>
   </data>
@@ -314,6 +326,9 @@
   </data>
   <data name="LabelSourceCode" xml:space="preserve">
     <value>Source code:</value>
+  </data>
+  <data name="LabelSpellingCheck" xml:space="preserve">
+	  <value>Spelling Check</value>
   </data>
   <data name="LabelStrikeThrough" xml:space="preserve">
     <value>Strikethrough</value>
@@ -341,6 +356,9 @@
   </data>
   <data name="LabelUnderline" xml:space="preserve">
     <value>Underline</value>
+  </data>
+  <data name="LabelUndo" xml:space="preserve">
+	  <value>Undo</value>
   </data>
   <data name="LabelVersion" xml:space="preserve">
 	  <value>Version: 1.0.1</value>
@@ -372,8 +390,20 @@
   <data name="OptionSelectATheme" xml:space="preserve">
     <value>Select a theme</value>
   </data>
+  <data name="ProcessMessageCheckingChanges" xml:space="preserve">
+	  <value>Checking for changes...</value>
+  </data>
+  <data name="ProcessMessageInsertingImage" xml:space="preserve">
+	  <value>Inserting the imgae...</value>
+  </data>
   <data name="ProcessMessageLoading" xml:space="preserve">
     <value>Loading...</value>
+  </data>
+  <data name="ProcessMessageOpening" xml:space="preserve">
+	  <value>Opening large document...</value>
+  </data>
+  <data name="ProcessMessageSaving" xml:space="preserve">
+	  <value>Saving changes...</value>
   </data>
   <data name="ToolTipBoldCommand" xml:space="preserve">
     <value>Bold (Ctrl + B)</value>
@@ -462,34 +492,7 @@
   <data name="ToolTipUndoMenu" xml:space="preserve">
     <value>Undo the last operation (Ctrl + Z)</value>
   </data>
-  <data name="AllSupportedFiles" xml:space="preserve">
-	  <value>All supported files (*.xml,*.docx,*.dotx,*.doc,*.dot,*.htm,*.html,*.rtf,*.txt,*.xaml,*.md)|*.xml;*.docx;*.dotx;*.doc;*.dot;*.htm;*.html;*.rtf;*.txt;*.xaml;*.md|Word XML Document (*.xml)|*.xml|Word Document (*.docx)|*.docx|Word Template (*.dotx)|*.dotx|Word 97 - 2003 Document (*.doc)|*.doc|Word 97 - 2003 Template (*.dot)|*.dot|Web Page (*.htm,*.html)|*.htm;*.html|Rich Text File (*.rtf)|*.rtf|Text File (*.txt)|*.txt|Xaml File (*.xaml)|*.xaml|Markdown File (*.md)|*.md</value>
-  </data>
-  <data name="ProcessMessageSaving" xml:space="preserve">
-	  <value>Saving changes...</value>
-  </data>
-  <data name="ProcessMessageOpening" xml:space="preserve">
-	  <value>Opening large document...</value>
-  </data>
-  <data name="ProcessMessageCheckingChanges" xml:space="preserve">
-	  <value>Checking for changes...</value>
-  </data>
-  <data name="ProcessMessageInsertingImage" xml:space="preserve">
-	  <value>Inserting the imgae...</value>
-  </data>
-  <data name="AllSupportedFilesSave" xml:space="preserve">
-	  <value>Word XML Document (*.xml)|*.xml|Word Document (*.docx)|*.docx|Word Template (*.dotx)|*.dotx|Word 97 - 2003 Document (*.doc)|*.doc|Word 97 - 2003 Template (*.dot)|*.dot|Web Page (*.htm,*.html)|*.htm;*.html|Rich Text File (*.rtf)|*.rtf|Text File (*.txt)|*.txt|Xaml File (*.xaml)|*.xaml|Markdown File (*.md)|*.md</value>
-  </data>
-  <data name="LabelSpellingCheck" xml:space="preserve">
-	  <value>Spelling Check</value>
-  </data>
-  <data name="LabelHelp" xml:space="preserve">
-	  <value>Help</value>
-  </data>
-  <data name="LabelUndo" xml:space="preserve">
-	  <value>Undo</value>
-  </data>
-  <data name="LabelRedo" xml:space="preserve">
-	  <value>Redo</value>
+  <data name="LabelWeb" xml:space="preserve">
+    <value>Website</value>
   </data>
 </root>

@@ -120,6 +120,12 @@
   <data name="AffirmativeButtonText" xml:space="preserve">
     <value>Oui</value>
   </data>
+  <data name="AllSupportedFiles" xml:space="preserve">
+	  <value>Tous les fichiers pris en charge (*.xml,*.docx,*.dotx,*.doc,*.dot,*.htm,*.html,*.rtf,*.txt,*.xaml,*.md)|*.xml;*.docx;*.dotx;*.doc;*.dot;*.htm;*.html;*.rtf;*.txt;*xaml;*.md|Word XML Document (*.xml)|*.xml|Word Document (*.docx)|*.docx| Modèle Word (*.dotx)|*.dotx| Word 97 - Document 2003 (*.doc)|*.doc| Modèle Word 97 - 2003 (*.dot)|*.dot| Page Web (*.htm,*.html)|*.htm;*.html| Fichier texte enrichi (*.rtf)|*.rtf| Fichier texte (*.txt)|*.txt| Fichier Xaml (*.xaml)|*.xaml| Fichier de balisage (*.md)|*.md</value>
+  </data>
+  <data name="AllSupportedFilesSave" xml:space="preserve">
+	  <value>Word XML Document (*.xml)|*.xml|Word Document (*.docx)|*.docx| Modèle Word (*.dotx)|*.dotx| Word 97 - Document 2003 (*.doc)|*.doc| Modèle Word 97 - 2003 (*.dot)|*.dot| Page Web (*.htm,*.html)|*.htm;*.html| Fichier texte enrichi (*.rtf)|*.rtf| Fichier texte (*.txt)|*.txt| Fichier Xaml (*.xaml)|*.xaml| Fichier de balisage (*.md)|*.md</value>
+  </data>
   <data name="CancelButtonText" xml:space="preserve">
     <value>Annuler</value>
   </data>
@@ -129,8 +135,53 @@
   <data name="ClosingWithoutSavingDialogTitle" xml:space="preserve">
     <value>Vous avez des modifications non enregistrées</value>
   </data>
+  <data name="CommandHeaderAbout" xml:space="preserve">
+	  <value>Sur</value>
+  </data>
+  <data name="CommandHeaderExit" xml:space="preserve">
+	  <value>_Proche</value>
+  </data>
+  <data name="CommandHeaderNew" xml:space="preserve">
+	  <value>_Nouveau</value>
+  </data>
+  <data name="CommandHeaderOpen" xml:space="preserve">
+	  <value>_Ouvert</value>
+  </data>
+  <data name="CommandHeaderPrint" xml:space="preserve">
+	  <value>_Imprimer</value>
+  </data>
+  <data name="CommandHeaderSave" xml:space="preserve">
+	  <value>_Sauvegarder</value>
+  </data>
+  <data name="CommandHeaderShortcuts" xml:space="preserve">
+	  <value>_Raccourcis</value>
+  </data>
+  <data name="CommandToolTipAbout" xml:space="preserve">
+	  <value>Affiche des informations sur Clean Editor</value>
+  </data>
+  <data name="CommandToolTipExit" xml:space="preserve">
+	  <value>Fermer l’application</value>
+  </data>
+  <data name="CommandToolTipNew" xml:space="preserve">
+	  <value>Créer un document</value>
+  </data>
+  <data name="CommandToolTipOpen" xml:space="preserve">
+	  <value>Ouvrir un document</value>
+  </data>
+  <data name="CommandToolTipPrint" xml:space="preserve">
+	  <value>Imprimer le document</value>
+  </data>
+  <data name="CommandToolTipSave" xml:space="preserve">
+	  <value>Enregistrer les modifications non enregistrées</value>
+  </data>
+  <data name="CommandToolTipShortcuts" xml:space="preserve">
+	  <value>Afficher la liste des raccourcis</value>
+  </data>
   <data name="DefaultDocumentTitle" xml:space="preserve">
     <value>Nouveau document</value>
+  </data>
+  <data name="FolderPickerTitle" xml:space="preserve">
+	  <value>Sélectionner le chemin d’accès aux fichiers temporaires</value>
   </data>
   <data name="LabelAbout" xml:space="preserve">
     <value>Sur</value>
@@ -185,6 +236,9 @@
   </data>
   <data name="LabelHeader4" xml:space="preserve">
     <value>En-tête 4</value>
+  </data>
+  <data name="LabelHelp" xml:space="preserve">
+	  <value>Aide</value>
   </data>
   <data name="LabelIncreaseIndent" xml:space="preserve">
     <value>Diminution de l’indent</value>
@@ -255,6 +309,9 @@
   <data name="LabelQueries" xml:space="preserve">
     <value>Requêtes</value>
   </data>
+  <data name="LabelRedo" xml:space="preserve">
+	  <value>Annuler</value>
+  </data>
   <data name="LabelReferences" xml:space="preserve">
     <value>Références</value>
   </data>
@@ -269,6 +326,9 @@
   </data>
   <data name="LabelSourceCode" xml:space="preserve">
     <value>Source:</value>
+  </data>
+  <data name="LabelSpellingCheck" xml:space="preserve">
+	  <value>Vérification de l’orthographe</value>
   </data>
   <data name="LabelStrikeThrough" xml:space="preserve">
     <value>Barré</value>
@@ -297,6 +357,9 @@
   <data name="LabelUnderline" xml:space="preserve">
     <value>Souligner</value>
   </data>
+  <data name="LabelUndo" xml:space="preserve">
+	  <value>Refaire</value>
+  </data>
   <data name="LabelVersion" xml:space="preserve">
 	  <value>Version: 1.0.1</value>
   </data>
@@ -311,6 +374,36 @@
   </data>
   <data name="NegativeButtonText" xml:space="preserve">
     <value>Non</value>
+  </data>
+  <data name="OptionCurrentPath" xml:space="preserve">
+	  <value>Chemin d’accès actuel</value>
+  </data>
+  <data name="OptionSelectAFontFamily" xml:space="preserve">
+	  <value>Sélectionner une famille de polices</value>
+  </data>
+  <data name="OptionSelectAFontSize" xml:space="preserve">
+	  <value>Sélectionner une taille de police (Min:8, Max:100)</value>
+  </data>
+  <data name="OptionSelectALanguage" xml:space="preserve">
+	  <value>Sélectionner une langue</value>
+  </data>
+  <data name="OptionSelectATheme" xml:space="preserve">
+	  <value>Sélectionner un thème</value>
+  </data>
+  <data name="ProcessMessageCheckingChanges" xml:space="preserve">
+	  <value>Vérification des modifications...</value>
+  </data>
+  <data name="ProcessMessageInsertingImage" xml:space="preserve">
+	  <value>Insertion de l’image...</value>
+  </data>
+  <data name="ProcessMessageLoading" xml:space="preserve">
+	  <value>Chargement...</value>
+  </data>
+  <data name="ProcessMessageOpening" xml:space="preserve">
+	  <value>Ouverture d’un grand document...</value>
+  </data>
+  <data name="ProcessMessageSaving" xml:space="preserve">
+	  <value>Enregistrement des modifications...</value>
   </data>
   <data name="ToolTipBoldCommand" xml:space="preserve">
     <value>Gras (Ctrl + B)</value>
@@ -381,6 +474,9 @@
   <data name="ToolTipSetNormalStyleCommand" xml:space="preserve">
     <value>Normal (Ctrl + 0)</value>
   </data>
+  <data name="ToolTipSpellCheckCommand" xml:space="preserve">
+	  <value>Affiche le volet d’orthographe (F7)</value>
+  </data>
   <data name="ToolTipStrikeThroughCommand" xml:space="preserve">
 	  <value>Barré (Ctrl + Shift + S)</value>
   </data>
@@ -396,100 +492,7 @@
   <data name="ToolTipUndoMenu" xml:space="preserve">
     <value>Annule la dernière opération (Ctrl + Z)</value>
   </data>
-  <data name="FolderPickerTitle" xml:space="preserve">
-	  <value>Sélectionner le chemin d’accès aux fichiers temporaires</value>
-  </data>
-  <data name="ProcessMessageLoading" xml:space="preserve">
-	  <value>Chargement...</value>
-  </data>
-  <data name="OptionSelectALanguage" xml:space="preserve">
-	  <value>Sélectionner une langue</value>
-  </data>
-  <data name="OptionCurrentPath" xml:space="preserve">
-	  <value>Chemin d’accès actuel</value>
-  </data>
-  <data name="OptionSelectAFontFamily" xml:space="preserve">
-	  <value>Sélectionner une famille de polices</value>
-  </data>
-  <data name="OptionSelectAFontSize" xml:space="preserve">
-	  <value>Sélectionner une taille de police (Min:8, Max:100)</value>
-  </data>
-  <data name="OptionSelectATheme" xml:space="preserve">
-	  <value>Sélectionner un thème</value>
-  </data>
-  <data name="ToolTipSpellCheckCommand" xml:space="preserve">
-	  <value>Affiche le volet d’orthographe (F7)</value>
-  </data>
-  <data name="CommandToolTipAbout" xml:space="preserve">
-	  <value>Affiche des informations sur Clean Editor</value>
-  </data>
-  <data name="CommandToolTipExit" xml:space="preserve">
-	  <value>Fermer l’application</value>
-  </data>
-  <data name="CommandToolTipNew" xml:space="preserve">
-	  <value>Créer un document</value>
-  </data>
-  <data name="CommandToolTipOpen" xml:space="preserve">
-	  <value>Ouvrir un document</value>
-  </data>
-  <data name="CommandToolTipPrint" xml:space="preserve">
-	  <value>Imprimer le document</value>
-  </data>
-  <data name="CommandToolTipSave" xml:space="preserve">
-	  <value>Enregistrer les modifications non enregistrées</value>
-  </data>
-  <data name="CommandToolTipShortcuts" xml:space="preserve">
-	  <value>Afficher la liste des raccourcis</value>
-  </data>
-  <data name="CommandHeaderAbout" xml:space="preserve">
-	  <value>Sur</value>
-  </data>
-  <data name="CommandHeaderExit" xml:space="preserve">
-	  <value>_Proche</value>
-  </data>
-  <data name="CommandHeaderNew" xml:space="preserve">
-	  <value>_Nouveau</value>
-  </data>
-  <data name="CommandHeaderOpen" xml:space="preserve">
-	  <value>_Ouvert</value>
-  </data>
-  <data name="CommandHeaderPrint" xml:space="preserve">
-	  <value>_Imprimer</value>
-  </data>
-  <data name="CommandHeaderSave" xml:space="preserve">
-	  <value>_Sauvegarder</value>
-  </data>
-  <data name="CommandHeaderShortcuts" xml:space="preserve">
-	  <value>_Raccourcis</value>
-  </data>
-  <data name="ProcessMessageCheckingChanges" xml:space="preserve">
-	  <value>Vérification des modifications...</value>
-  </data>
-  <data name="ProcessMessageInsertingImage" xml:space="preserve">
-	  <value>Insertion de l’image...</value>
-  </data>
-  <data name="ProcessMessageOpening" xml:space="preserve">
-	  <value>Ouverture d’un grand document...</value>
-  </data>
-  <data name="ProcessMessageSaving" xml:space="preserve">
-	  <value>Enregistrement des modifications...</value>
-  </data>
-  <data name="AllSupportedFiles" xml:space="preserve">
-	  <value>Tous les fichiers pris en charge (*.xml,*.docx,*.dotx,*.doc,*.dot,*.htm,*.html,*.rtf,*.txt,*.xaml,*.md)|*.xml;*.docx;*.dotx;*.doc;*.dot;*.htm;*.html;*.rtf;*.txt;*xaml;*.md|Word XML Document (*.xml)|*.xml|Word Document (*.docx)|*.docx| Modèle Word (*.dotx)|*.dotx| Word 97 - Document 2003 (*.doc)|*.doc| Modèle Word 97 - 2003 (*.dot)|*.dot| Page Web (*.htm,*.html)|*.htm;*.html| Fichier texte enrichi (*.rtf)|*.rtf| Fichier texte (*.txt)|*.txt| Fichier Xaml (*.xaml)|*.xaml| Fichier de balisage (*.md)|*.md</value>
-  </data>
-  <data name="AllSupportedFilesSave" xml:space="preserve">
-	  <value>Word XML Document (*.xml)|*.xml|Word Document (*.docx)|*.docx| Modèle Word (*.dotx)|*.dotx| Word 97 - Document 2003 (*.doc)|*.doc| Modèle Word 97 - 2003 (*.dot)|*.dot| Page Web (*.htm,*.html)|*.htm;*.html| Fichier texte enrichi (*.rtf)|*.rtf| Fichier texte (*.txt)|*.txt| Fichier Xaml (*.xaml)|*.xaml| Fichier de balisage (*.md)|*.md</value>
-  </data>
-  <data name="LabelSpellingCheck" xml:space="preserve">
-	  <value>Vérification de l’orthographe</value>
-  </data>
-  <data name="LabelHelp" xml:space="preserve">
-	  <value>Aide</value>
-  </data>
-  <data name="LabelRedo" xml:space="preserve">
-	  <value>Annuler</value>
-  </data>
-  <data name="LabelUndo" xml:space="preserve">
-	  <value>Refaire</value>
+  <data name="LabelWeb" xml:space="preserve">
+    <value>Site Web</value>
   </data>
 </root>
