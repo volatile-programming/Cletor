@@ -1,45 +1,45 @@
 <ResourceDictionary
-	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-	xmlns:syncfusion="http://schemas.syncfusion.com/wpf">
-	<Style
-		x:Key="ButtonStyle"
-		BasedOn="{StaticResource MahApps.Styles.Button}"
-		TargetType="syncfusion:ButtonAdv">
-		<Setter Property="Padding" Value="10" />
-		<Setter Property="Focusable" Value="False" />
-		<Setter Property="BorderThickness" Value="1" />
-		<Setter Property="FontFamily" Value="{DynamicResource BaseFontFamily}" />
-		<Setter Property="FontSize" Value="{DynamicResource BaseFontSize}" />
-	</Style>
-	<Style
-		x:Key="ToggleButtonStyle"
-		BasedOn="{StaticResource {x:Type ToggleButton}}"
-		TargetType="ToggleButton">
-		<Setter Property="Padding" Value="10" />
-		<Setter Property="Focusable" Value="False" />
-		<Setter Property="BorderThickness" Value="1" />
-		<Setter Property="FontFamily" Value="{DynamicResource BaseFontFamily}" />
-		<Setter Property="FontSize" Value="{DynamicResource BaseFontSize}" />
-	</Style>
-	<Style
-		x:Key="DropDownButtonStyle"
-		BasedOn="{StaticResource MahApps.Styles.Button}"
-		TargetType="syncfusion:ButtonAdv">
-		<Setter Property="Padding" Value="10" />
-		<Setter Property="Focusable" Value="False" />
-		<Setter Property="BorderThickness" Value="1" />
-		<Setter Property="FontFamily" Value="{DynamicResource BaseFontFamily}" />
-		<Setter Property="FontSize" Value="{DynamicResource BaseFontSize}" />
-	</Style>
-	<Style
-		x:Key="SeamlessButtonStyle"
-		BasedOn="{StaticResource MahApps.Styles.Button}"
-		TargetType="syncfusion:ButtonAdv">
-		<Setter Property="Padding" Value="5" />
-		<Setter Property="Focusable" Value="False" />
-		<Setter Property="BorderThickness" Value="0" />
-		<Setter Property="FontFamily" Value="{DynamicResource BaseFontFamily}" />
-		<Setter Property="FontSize" Value="{DynamicResource BaseFontSize}" />
-	</Style>
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:syncfusion="http://schemas.syncfusion.com/wpf">
+    <Style
+        x:Key="ButtonStyle"
+        BasedOn="{StaticResource MahApps.Styles.Button}"
+        TargetType="syncfusion:ButtonAdv">
+        <Setter Property="Padding" Value="10" />
+        <Setter Property="Focusable" Value="False" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="FontFamily" Value="{DynamicResource BaseFontFamily}" />
+        <Setter Property="FontSize" Value="{DynamicResource BaseFontSize}" />
+    </Style>
+    <Style
+        x:Key="ToggleButtonStyle"
+        BasedOn="{StaticResource {x:Type ToggleButton}}"
+        TargetType="ToggleButton">
+        <Setter Property="Padding" Value="10" />
+        <Setter Property="Focusable" Value="False" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="FontFamily" Value="{DynamicResource BaseFontFamily}" />
+        <Setter Property="FontSize" Value="{DynamicResource BaseFontSize}" />
+    </Style>
+    <Style
+        x:Key="DropDownButtonStyle"
+        BasedOn="{StaticResource MahApps.Styles.Button}"
+        TargetType="syncfusion:ButtonAdv">
+        <Setter Property="Padding" Value="10" />
+        <Setter Property="Focusable" Value="False" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="FontFamily" Value="{DynamicResource BaseFontFamily}" />
+        <Setter Property="FontSize" Value="{DynamicResource BaseFontSize}" />
+    </Style>
+    <Style
+        x:Key="SeamlessButtonStyle"
+        BasedOn="{StaticResource MahApps.Styles.Button}"
+        TargetType="syncfusion:ButtonAdv">
+        <Setter Property="Padding" Value="5" />
+        <Setter Property="Focusable" Value="False" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="FontFamily" Value="{DynamicResource BaseFontFamily}" />
+        <Setter Property="FontSize" Value="{DynamicResource BaseFontSize}" />
+    </Style>
 </ResourceDictionary>

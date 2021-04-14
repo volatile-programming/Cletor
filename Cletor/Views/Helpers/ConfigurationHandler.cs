@@ -57,7 +57,7 @@ namespace Cletor.Views.Helpers
 
         private void RegisterInitialConfiguration()
         {
-            _registryHandler[Constants.TemporalFilesKey] = Constants.TemporalFilesValue;
+            _registryHandler[Constants.TemporalFilesKey] = StaticData.CachePath;
             _registryHandler[Constants.ThemeKey] = Constants.ThemeValue;
             _registryHandler[Constants.LanguageKey] = Constants.LanguageValue;
             _registryHandler[Constants.FontFamilyKey] = Constants.FontFamilyValue;
